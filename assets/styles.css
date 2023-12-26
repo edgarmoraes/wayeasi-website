@@ -60,7 +60,7 @@ ul {
 .grey-text {
   color: #dcdcdc;
 }
-img.spotify-logo {
+img.wayeasi-logo {
   margin-left: 270px;
   width: 8%;
 }
@@ -76,7 +76,7 @@ img.spotify-logo {
 }
 /* Card 1 */
 .card-1 {
-  background-color: #fdced5;
+  background-color: #D9C4A9;
   display: flex;
   height: 39em;
 }
@@ -122,7 +122,7 @@ p.subscription-text {
 /* card 2 */
 .card-2 {
   top: 39em;
-  background-image: url("/assets/spotify_md.png");
+  background-image: url("/assets/wayeasi_md.png");
   background-repeat: no-repeat;
   background-size: 100% 39em;
   height: 39em;
@@ -212,20 +212,20 @@ footer {
 .state-copyright-area {
   display: flex;
 }
-.america-flag {
+.brasil-flag {
   width: 12%;
   height: 15%;
   margin-left: 8px;
   margin-top: 3px;
 }
-.usa-text {
+.brasil-text {
   color: #a9a9a9;
   margin-top: 4px;
   margin-left: 348%;
   font-size: 12px;
   font-family: lineto-pro-medium;
 }
-.spotify-copyright {
+.wayeasi-copyright {
   color: #a9a9a9;
   font-size: 12px;
   font-family: lineto-pro-book;
@@ -266,7 +266,7 @@ footer {
 .btn-green {
   position: relative;
   border: none;
-  background-color: #1db954;
+  background-color: #FF743C;
   width: 215px;
   height: 500px;
   padding: 16px;
@@ -277,7 +277,7 @@ footer {
 .btn-white {
   position: relative;
   border: 2px solid black;
-  background-color: #fdced5;
+  background-color: #D9C4A9;
   width: 215px;
   height: 500px;
   padding: 16px;
@@ -302,7 +302,7 @@ footer {
 .btn-green-card2 {
   position: relative;
   border: none;
-  background-color: #1db954;
+  background-color: #FF743C;
   width: 245px;
   height: 50px;
   padding: 16px;
@@ -312,21 +312,21 @@ footer {
 }
 /* hovers */
 a.green:hover {
-  color: #1db954;
+  color: #FF743C;
 }
 .fa-instagram:hover,
 .fa-facebook:hover,
 .fa-twitter:hover,
 .footer-links ul li a:hover,
-.usa-text:hover {
-  color: #21ce61;
+.brasil-text:hover {
+  color: #FF743C;
 }
 .btn-white:hover {
   transform: scale(1.06);
 }
 .btn-green:hover,
 .btn-green-card2:hover {
-  background-color: #21ce61;
+  background-color: #ff8a5c;
   transform: scale(1.06);
 }
 /* Nav Buttons(for media query) */
@@ -344,7 +344,7 @@ a.green:hover {
   display: none;
   color: white;
 }
-.spotify-logo-sidebar {
+.wayeasi-logo-sidebar {
   display: none;
 }
 /* Media Queries */
@@ -355,7 +355,7 @@ a.green:hover {
   .main-nav ul.nav-options {
     margin-left: 500px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: 150px;
     width: 9%;
   }
@@ -367,7 +367,7 @@ a.green:hover {
   .main-nav ul.nav-options {
     margin-left: 500px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: 50px;
     width: 10%;
   }
@@ -390,7 +390,7 @@ a.green:hover {
   .main-nav ul.nav-options {
     margin-left: 330px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: 110px;
     width: 12%;
   }
@@ -401,12 +401,12 @@ a.green:hover {
   .footer-links {
     grid-template-columns: repeat(3, 148px);
   }
-  .america-flag {
+  .brasil-flag {
     margin-left: 10px;
     width: 15%;
     height: 15%;
   }
-  .usa-text {
+  .brasil-text {
     margin-left: 407%;
   }
   .last-section-div ul {
@@ -418,7 +418,7 @@ a.green:hover {
     margin-right: 20px;
     white-space: nowrap;
   }
-  .spotify-copyright {
+  .wayeasi-copyright {
     margin-left: 240px;
   }
 }
@@ -479,13 +479,13 @@ a.green:hover {
     font-size: 18;
     padding: 8px;
   }
-  .america-flag {
+  .brasil-flag {
     margin-left: 10px;
     width: 10%;
     height: 10%;
     margin-top: 50px;
   }
-  .usa-text {
+  .brasil-text {
     margin-left: 193%;
     margin-top: 52px;
   }
@@ -498,7 +498,7 @@ a.green:hover {
     margin-right: 20px;
     white-space: nowrap;
   }
-  .spotify-copyright {
+  .wayeasi-copyright {
     margin-left: 80px;
     white-space: nowrap;
   }
@@ -506,7 +506,7 @@ a.green:hover {
     background-color: #000;
     height: 60px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: -600px;
     width: 10%;
   }
@@ -544,7 +544,7 @@ a.green:hover {
   .main-nav ul.display {
     transform: translateX(20%);
   }
-  .spotify-logo-sidebar {
+  .wayeasi-logo-sidebar {
     display: block;
     padding-left: 35px;
     width: 28%;
@@ -583,17 +583,17 @@ a.green:hover {
     margin-left: 0px;
     margin-top: 100px;
   }
-  .america-flag {
+  .brasil-flag {
     margin-left: 10px;
     width: 10%;
     height: 10%;
     margin-top: 80px;
   }
-  .usa-text {
+  .brasil-text {
     margin-left: 230%;
     margin-top: 80px;
   }
-  .spotify-copyright {
+  .wayeasi-copyright {
     margin-left: 20px;
     white-space: nowrap;
   }
@@ -610,7 +610,7 @@ a.green:hover {
     margin-top: -130px;
     margin-left: 0px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: -600px;
     width: 12%;
   }
@@ -633,17 +633,17 @@ a.green:hover {
     margin-top: -130px;
     margin-left: -60px;
   }
-  .america-flag {
+  .brasil-flag {
     margin-left: 10px;
     width: 10%;
     height: 10%;
     margin-top: 30px;
   }
-  .usa-text {
+  .brasil-text {
     margin-left: 60%;
     margin-top: 30px;
   }
-  .spotify-copyright {
+  .wayeasi-copyright {
     margin-left: -410px;
     margin-top: -50px;
     white-space: nowrap;
@@ -682,7 +682,7 @@ a.green:hover {
   .btn-green {
     position: relative;
     border: none;
-    background-color: #1db954;
+    background-color: #FF743C;
     width: 600px;
     height: 500px;
     padding: 16px;
@@ -694,7 +694,7 @@ a.green:hover {
     position: relative;
     border: 2px solid black;
     width: 600px;
-    background-color: #fdced5;
+    background-color: #D9C4A9;
     height: 500px;
     padding: 16px;
     top: 25px;
@@ -705,7 +705,7 @@ a.green:hover {
     margin-top: 40px;
     width: 900px;
   }
-  img.spotify-logo {
+  img.wayeasi-logo {
     margin-left: -600px;
     width: 14%;
   }
