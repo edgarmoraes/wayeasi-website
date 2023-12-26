@@ -46,7 +46,7 @@ ul {
 }
 .main-nav ul.nav-options {
   flex: 1;
-  margin-left: 525px;
+  margin-left: 325px;
   font-family: lineto-pro-medium;
   width: 100px;
   font-size: 15.8px;
@@ -353,7 +353,7 @@ a.green:hover {
     padding-left: 140px;
   }
   .main-nav ul.nav-options {
-    margin-left: 500px;
+    margin-left: 325px;
   }
   img.wayeasi-logo {
     margin-left: 150px;
@@ -365,10 +365,10 @@ a.green:hover {
     padding-left: 50px;
   }
   .main-nav ul.nav-options {
-    margin-left: 500px;
+    margin-left: 325px;
   }
   img.wayeasi-logo {
-    margin-left: 50px;
+    margin-left: 150px;
     width: 10%;
   }
   .text1-container {
@@ -388,10 +388,10 @@ a.green:hover {
     margin-top: -130px;
   }
   .main-nav ul.nav-options {
-    margin-left: 330px;
+    margin-left: 175px;
   }
   img.wayeasi-logo {
-    margin-left: 110px;
+    margin-left: 150px;
     width: 12%;
   }
   footer {
@@ -427,7 +427,7 @@ a.green:hover {
     padding-left: 20px;
   }
   .main-nav ul.nav-options {
-    margin-left: 270px;
+    margin-left: 100px;
   }
 }
 @media (max-width: 993px) {
@@ -517,8 +517,8 @@ a.green:hover {
     z-index: 3;
     display: block;
     position: absolute;
-    margin-top: 415px;
-    left: 200px;
+    margin-top: 900px;
+    left: 450px;
     background: #000;
     width: 45%;
     height: 935px;
@@ -531,7 +531,7 @@ a.green:hover {
     margin-top: 30px;
   }
   .main-nav ul li a.white-text {
-    font-size: 35px;
+    font-size: 25px;
   }
   .line {
     width: 20px;
@@ -618,6 +618,14 @@ a.green:hover {
     width: 80%;
     transform: translateX(-20px);
   }
+  .main-nav ul.nav-options {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-top: 900px;
+    left: 450px;
+    transition: transform 0.5s ease-in-out;
+  }
 }
 @media (max-width: 790px) {
   .text1-container {
@@ -650,7 +658,15 @@ a.green:hover {
   }
   .main-nav ul.display {
     width: 80%;
-    transform: translateX(-0px);
+    transform: translateX(-30px);
+  }
+  .main-nav ul.nav-options {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-top: 900px;
+    left: 425px;
+    transition: transform 0.5s ease-in-out;
   }
 }
 @media (max-width: 750px) {
