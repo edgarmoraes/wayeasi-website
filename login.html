@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WayEasi Login</title>
+    <title>WayEasi | Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/login.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="body-login">
-    <div class="container-main-link-login">   
+    <div class="logo-main-link-login">   
         <a href="main.html" class="main-link-login">
             <img class="wayeasi-logo" src="/images/Wayeasi_logo.png" />
       </a>
     </div>
-    <div class="login-container">
-        <h2>Login</h2>
+    <div class="wrapper">
+        <h1>Área do Usuário</h1>
         <form class="login-form" action="#" method="post">
-            <div class="form-group">
-                <label for="username">Email ou Usuário:</label>
-                <input type="text" id="username" name="username" required>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="E-mail ou Usuário" required>
+                <i class='bx bxs-user'></i>
             </div>
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Senha" required>
+                <i class='bx bxs-lock-alt' ></i>
             </div>
+
+            <div = class="remember-forgot">
+                <label><input type="checkbox">Guardar sessão</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
             <button type="submit" class="login-btn">Login</button>
+
+            <div class="register-link">
+                <p>Não possui uma conta? <a href="#">Registre-se</a></p>
+            </div>
         </form>
     </div>
 </body>
