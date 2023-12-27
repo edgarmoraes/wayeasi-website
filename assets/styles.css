@@ -263,7 +263,7 @@ footer {
   margin-right: 10px;
 }
 /* Buttons */
-.btn-green {
+.btn-red {
   position: relative;
   border: none;
   background-color: #FF743C;
@@ -299,7 +299,7 @@ footer {
   font-family: lineto-pro-book;
   letter-spacing: 2px;
 }
-.btn-green-card2 {
+.btn-red-card2 {
   position: relative;
   border: none;
   background-color: #FF743C;
@@ -311,7 +311,7 @@ footer {
   border-radius: 25px;
 }
 /* hovers */
-a.green:hover {
+a.red:hover {
   color: #FF743C;
 }
 .fa-instagram:hover,
@@ -324,8 +324,8 @@ a.green:hover {
 .btn-white:hover {
   transform: scale(1.06);
 }
-.btn-green:hover,
-.btn-green-card2:hover {
+.btn-red:hover,
+.btn-red-card2:hover {
   background-color: #ff8a5c;
   transform: scale(1.06);
 }
@@ -695,7 +695,7 @@ a.green:hover {
     font-size: 30.55px;
     font-weight: 500;
   }
-  .btn-green {
+  .btn-red {
     position: relative;
     border: none;
     background-color: #FF743C;
