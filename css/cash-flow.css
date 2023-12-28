@@ -36,7 +36,7 @@ ul {
     background-color: rgba(25, 20, 20, 0.65);
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 40px;
     padding: 20px 0;
     position: fixed;
     z-index: 3;
@@ -86,3 +86,42 @@ img.wayeasi-logo {
     height: 16px;
 }
 
+.cards {
+    display: grid;
+    z-index: 1;
+}
+
+.commands {
+    background-color: #D9C4A9;
+    height: 20rem;
+}
+
+/* Estilos para a caixa de comandos */
+.box-commands {
+    max-width: 500px;
+    margin: 60px 0 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os elementos internos */
+label, select, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.linha {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    margin: 10px 0 20px 0;
+    padding: 8px;
+    cursor: pointer;
+}
