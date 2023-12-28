@@ -2,30 +2,37 @@
   src: url("/fonts/lineto-circular-black.ttf");
   font-family: lineto-black;
 }
+
 @font-face {
   src: url("/fonts/lineto-circular-pro-book.ttf");
   font-family: lineto-pro-book;
 }
+
 @font-face {
   src: url("/fonts/lineto-circular-pro-medium.ttf");
   font-family: lineto-pro-medium;
 }
+
 /* Universal Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 a {
   color: #000;
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
+
 .container {
   margin: auto;
 }
+
 /* Navigations */
 .main-nav {
   display: flex;
@@ -36,14 +43,18 @@ ul {
   padding: 20px 0;
   position: fixed;
   z-index: 3;
+  width: 100%;
 }
+
 .main-nav ul {
   display: flex;
 }
+
 .main-nav ul.nav-options li {
   margin-bottom: 1px;
   margin-left: 32.5px;
 }
+
 .main-nav ul.nav-options {
   flex: 1;
   margin-left: 325px;
@@ -54,32 +65,43 @@ ul {
   margin-top: 1px;
   font-weight: normal;
 }
+
 .white-text {
   color: #fff;
 }
+
 .grey-text {
   color: #dcdcdc;
 }
+
 img.wayeasi-logo {
-  margin-left: 270px;
-  width: 8%;
+  width: 100%;
 }
+
+.logo-link {
+  margin-left: 270px;
+  width: 7.596rem;
+}
+
 .line {
   border: 0.5px solid white;
   margin-top: 1.8px;
   height: 16px;
 }
+
 /* Cards */
 .cards {
   display: grid;
   z-index: 1;
 }
+
 /* Card 1 */
 .card-1 {
   background-color: #D9C4A9;
   display: flex;
   height: 39em;
 }
+
 .text1-container {
   padding-top: 120px;
   display: flex;
@@ -91,6 +113,7 @@ img.wayeasi-logo {
   width: 1090px;
   height: 200px;
 }
+
 .card-1-text {
   font-family: lineto-black;
   font-weight: bolder;
@@ -99,10 +122,12 @@ img.wayeasi-logo {
   margin-bottom: 30px;
   font-size: 78px;
 }
+
 strong.bold-height {
   font-weight: normal;
   font-size: 87px;
 }
+
 p.text2 {
   margin-bottom: 20px;
   letter-spacing: -0.5px;
@@ -110,15 +135,18 @@ p.text2 {
   font-size: 30.55px;
   font-weight: 500;
 }
+
 .subscription-div {
   margin-top: 40px;
   width: 650px;
   height: 100px;
 }
+
 p.subscription-text {
   font-size: 12px;
   font-family: lineto-pro-book;
 }
+
 /* card 2 */
 .card-2 {
   top: 39em;
@@ -127,6 +155,7 @@ p.subscription-text {
   background-size: 100% 39em;
   height: 39em;
 }
+
 .card2-text-container {
   display: flex;
   flex-direction: column;
@@ -136,6 +165,7 @@ p.subscription-text {
   margin-bottom: 100px;
   height: 35em;
 }
+
 .card2-text {
   font-family: lineto-black;
   font-weight: bolder;
@@ -143,20 +173,24 @@ p.subscription-text {
   letter-spacing: -1.2px;
   font-size: 78px;
 }
+
 .card2-text2 {
   color: #fff;
   font-family: lineto-pro-book;
   margin-top: 25px;
   font-size: 21px;
 }
+
 /* card3(links) */
 .img-container {
   width: 140px;
   height: 45px;
 }
+
 img.footer-img {
   width: 94%;
 }
+
 footer {
   background-color: #000;
   width: auto;
@@ -166,11 +200,13 @@ footer {
   padding-top: 75px;
   grid-template-columns: repeat(4, 190px);
 }
+
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 200px);
   margin-top: 20px;
 }
+
 .footer-links ul li h5 {
   color: #a9a9a9;
   font-size: 12px;
@@ -178,16 +214,19 @@ footer {
   letter-spacing: 0.5px;
   margin-bottom: 25px;
 }
+
 .footer-links ul li a {
   display: flex;
   color: #fff;
   margin-bottom: 20px;
   font-family: lineto-pro-book;
 }
+
 .last-section-div {
   width: auto;
   margin-top: 25px;
 }
+
 .last-section-div ul {
   position: absolute;
   display: flex;
@@ -195,29 +234,35 @@ footer {
   margin-top: 5px;
   margin-left: -190px;
 }
+
 .last-section-div ul li {
   margin-right: 23px;
 }
+
 .last-section-div ul li a {
   color: #a9a9a9;
   font-size: 12px;
   font-family: lineto-pro-book;
 }
+
 .social-media-icons {
   width: 220px;
   height: 60px;
   margin-left: 298%;
   margin-top: 20px;
 }
+
 .state-copyright-area {
   display: flex;
 }
+
 .brasil-flag {
   width: 12%;
   height: 15%;
   margin-left: 8px;
   margin-top: 3px;
 }
+
 .brasil-text {
   color: #a9a9a9;
   margin-top: 4px;
@@ -225,12 +270,14 @@ footer {
   font-size: 12px;
   font-family: lineto-pro-medium;
 }
+
 .wayeasi-copyright {
   color: #a9a9a9;
   font-size: 12px;
   font-family: lineto-pro-book;
   margin-left: 456px;
 }
+
 /* icons */
 .fa-instagram {
   background: #242424;
@@ -242,6 +289,7 @@ footer {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .fa-twitter {
   background: #242424;
   color: white;
@@ -252,6 +300,7 @@ footer {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .fa-facebook {
   background: #242424;
   color: white;
@@ -262,6 +311,7 @@ footer {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 /* Buttons */
 .btn-red {
   position: relative;
@@ -274,6 +324,7 @@ footer {
   right: 114px;
   border-radius: 25px;
 }
+
 .btn-white {
   position: relative;
   border: 2px solid black;
@@ -285,6 +336,7 @@ footer {
   right: -114px;
   border-radius: 25px;
 }
+
 .btn-white-text {
   box-sizing: border-box;
   color: #fff;
@@ -292,6 +344,7 @@ footer {
   font-family: lineto-pro-book;
   letter-spacing: 2px;
 }
+
 .btn-black-text {
   box-sizing: border-box;
   color: #000;
@@ -299,6 +352,7 @@ footer {
   font-family: lineto-pro-book;
   letter-spacing: 2px;
 }
+
 .btn-red-card2 {
   position: relative;
   border: none;
@@ -310,10 +364,12 @@ footer {
   right: 10px;
   border-radius: 25px;
 }
+
 /* hovers */
 a.red:hover {
   color: #FF743C;
 }
+
 .fa-instagram:hover,
 .fa-facebook:hover,
 .fa-twitter:hover,
@@ -321,14 +377,17 @@ a.red:hover {
 .brasil-text:hover {
   color: #FF743C;
 }
+
 .btn-white:hover {
   transform: scale(1.06);
 }
+
 .btn-red:hover,
 .btn-red-card2:hover {
   background-color: #ff8a5c;
   transform: scale(1.06);
 }
+
 /* Nav Buttons(for media query) */
 .nav-btn {
   position: fixed;
@@ -337,16 +396,20 @@ a.red:hover {
   z-index: 4;
   display: none;
 }
+
 .fa-bars {
   color: white;
 }
+
 .fa-close {
   display: none;
   color: white;
 }
+
 .wayeasi-logo-sidebar {
   display: none;
 }
+
 /* Media Queries */
 @media (max-width: 1445px) {
   footer {
