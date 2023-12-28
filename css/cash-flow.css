@@ -1,0 +1,88 @@
+@font-face {
+    src: url("/fonts/lineto-circular-black.ttf");
+    font-family: lineto-black;
+}
+
+@font-face {
+    src: url("/fonts/lineto-circular-pro-book.ttf");
+    font-family: lineto-pro-book;
+}
+
+@font-face {
+    src: url("/fonts/lineto-circular-pro-medium.ttf");
+    font-family: lineto-pro-medium;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* NAVIGATION BAR */
+
+.cashflow-nav {
+    display: flex;
+    background-color: rgba(25, 20, 20, 0.65);
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 20px 0;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+.cashflow-nav ul {
+    display: flex;
+}
+
+.cashflow-nav ul.nav-options {
+    flex: 1;
+    margin-left: 325px;
+    font-family: lineto-pro-medium;
+    width: 100px;
+    font-size: 15.8px;
+    letter-spacing: -0.5px;
+    margin-top: 1px;
+    font-weight: normal;
+}
+
+.cashflow-nav ul.nav-options li {
+    margin-bottom: 1px;
+    margin-left: 32.5px;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.grey-text {
+    color: #dcdcdc;
+}
+
+img.wayeasi-logo {
+    width: 100%;
+}
+
+.logo-link {
+    margin-left: 270px;
+    width: 7.596rem;
+}
+
+.line {
+    border: 0.5px solid white;
+    margin-top: 1.8px;
+    height: 16px;
+}
+

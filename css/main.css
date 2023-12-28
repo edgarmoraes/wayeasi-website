@@ -50,11 +50,6 @@ ul {
   display: flex;
 }
 
-.main-nav ul.nav-options li {
-  margin-bottom: 1px;
-  margin-left: 32.5px;
-}
-
 .main-nav ul.nav-options {
   flex: 1;
   margin-left: 325px;
@@ -64,6 +59,11 @@ ul {
   letter-spacing: -0.5px;
   margin-top: 1px;
   font-weight: normal;
+}
+
+.main-nav ul.nav-options li {
+  margin-bottom: 1px;
+  margin-left: 32.5px;
 }
 
 .white-text {
