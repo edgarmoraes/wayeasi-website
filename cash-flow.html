@@ -10,46 +10,72 @@
     <nav class="cashflow-nav">
         <a href="main.html" class="logo-link"><img class="wayeasi-logo" src="/images/Wayeasi_logo.png" /></a>
         <ul class="nav-options">
-          <li><a href="#" class="white-text red">Sobre Nós</a></li>
-          <li><a href="#" class="white-text red">Blog</a></li>
-          <li><a href="#" class="white-text red">Funcionalidades</a></li>
+          <li><a href="cash-flow.html" class="white-text red">Fluxo de Caixa</a></li>
+          <li><a href="#" class="white-text red">Realizado</a></li>
+          <li><a href="#" class="white-text red">Relatórios</a></li>
           <li><div class="line"></div></li>
-          <li><a href="#" class="grey-text red">Cadastre-se</a></li>
-          <li><a href="login.html" class="grey-text red">Login</a></li>
-            <img class="wayeasi-logo-sidebar display" src="/images/Wayeasi_log.png"/>
+          <li><a href="#" class="white-text red">Configurações</a></li>
+          <li><a href="#" class="white-text red">Meu Perfil</a></li>
         </ul>
       </nav>
       <!-- Caixa de comandos e informações -->
     <div class="cards">
       <div class="commands">
-        <div class="box-commands">
-          <div class="linha">
-            <label for="dropdown1">Dropdown 1:</label>
-              <select id="dropdown1">
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-              </select>
+        <div class="box-filters">
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="dropdown1">Contas Contábeis</label>
+                <select id="dropdown1">
+                  <option value="opcao1">Opção 1</option>
+                  <option value="opcao2">Opção 2</option>
+                  <option value="opcao3">Opção 3</option>
+                </select>
+            </div>
           </div>
-          <div class="linha">
-            <label for="dropdown2">Dropdown 2:</label>
-              <select id="dropdown2">
-                <option value="opcaoA">Opção A</option>
-                <option value="opcaoB">Opção B</option>
-                <option value="opcaoC">Opção C</option>
-              </select>
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="dropdown2">Meses</label>
+                <select id="dropdown2">
+                  <option value="opcao1">Opção 1</option>
+                  <option value="opcao2">Opção 2</option>
+                  <option value="opcao3">Opção 3</option>
+                </select>
+            </div>
           </div>
-          <div class="linha">
-            <label for="data1">Data 1:</label>
-            <input type="date" id="data1">
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="dropdown3">Bancos</label>
+                <select id="dropdown3">
+                  <option value="opcao1">Opção 1</option>
+                  <option value="opcao2">Opção 2</option>
+                  <option value="opcao3">Opção 3</option>
+                </select>
+            </div>
           </div>
-          <div class="linha">
-            <label for="data2">Data 2:</label>
-            <input type="date" id="data2">
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="data1">De</label>
+              <input type="date" id="data1">
+            </div>
           </div>
-          <div>
-            <label for="preenchimento">Campo de Preenchimento:</label>
-            <input type="text" id="preenchimento">
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="data2">Até</label>
+              <input type="date" id="data2">
+            </div>
+          </div>
+          <div class="filter">
+            <div class="dropdown-data">
+              <label for="dropdown4">Natureza</label>
+                <select id="dropdown3">
+                  <option value="opcao1">Crédito</option>
+                  <option value="opcao2">Débito</option>
+                </select>
+            </div>
+          </div>
+          <div class="busca">
+            <label for="busca">Busca</label>
+            <input type="text" id="busca">
           </div>
           <div class="buttons">
             <button onclick="funcaoBotao1()">Botão 1</button>

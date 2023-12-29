@@ -74,6 +74,10 @@ ul {
   color: #dcdcdc;
 }
 
+.main-nav a {
+  display: flex;
+}
+
 img.wayeasi-logo {
   width: 100%;
 }
