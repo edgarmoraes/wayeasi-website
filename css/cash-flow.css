@@ -97,7 +97,8 @@ img.wayeasi-logo {
 
 /* Sepração da página em cards */
 .cards {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     z-index: 1;
     font-family: var(--fonte-main);
     font-size: 14px;
@@ -108,12 +109,16 @@ img.wayeasi-logo {
 }
 
 /* Estilos para a caixa de comandos */
+.left-part {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin: 60px 0 0 20px;
+}
+
 .box-filters {
     display: flex;
-    max-width: 35%;
-    margin: 60px auto 0 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -125,47 +130,70 @@ img.wayeasi-logo {
 .filter {
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 1%;
     text-align: center;
 }
 
 label {
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 select, input.data  {
     text-align: center;
     align-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     height: 30px;
     width: 150px;
     font-family: var(--fonte-main);
     border: none;
+    box-shadow: inset 0 0 3px hsla(0, 0%, 0%, 0.6);
 }
 
 .busca {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 10px;
+    width: 75%;
+    margin: 0 1%;
 }
 
 #busca {
     text-align: start;
+    align-content: center;
     padding-left: 15px;
     padding-right: 15px;
-    align-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     height: 30px;
     font-family: var(--fonte-main);
     border: none;
+    box-shadow: inset 0 0 3px hsla(0, 0%, 0%, 0.6);
+}
+
+.border-filter {
+    border: solid #000
+}
+
+.buscar-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 23%;
+    height: 30px;
+    margin-top: 32px;
+}
+
+.buscar-btn {
+    width: 100%;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
+    max-width: 100%;
+    border-radius: 30px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 button {
@@ -174,7 +202,7 @@ button {
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    width: 20%;
+    width: 30%;
 }
 
 .Recebimento {
@@ -193,4 +221,11 @@ button {
     background-color: rgb(28, 131, 0);
     color: #fff;
     box-shadow: inset 0 0 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.banks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
