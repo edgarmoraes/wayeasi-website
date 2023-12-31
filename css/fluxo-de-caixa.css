@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* universal */
-
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +27,6 @@ a:hover {
 }
 
 /* barra de navegação fixa */
-
 .logo {
   font-size: 24px;
   letter-spacing: 4px;
@@ -70,7 +68,6 @@ nav {
 }
 
 /* components */
-
 .box-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -105,7 +102,6 @@ nav {
 }
 
   /* estilo das caixas de seleções e datas */
-
 .flex select, input {
   background-color: #f4f2f2;
   border: none;
@@ -128,7 +124,6 @@ nav {
 }
 
   /* botões */
-
 .botao {
   margin: 10px auto;
   width: 50px;
@@ -226,8 +221,11 @@ nav {
   transition-duration: .3s;
 }
 
-/* caixa de pesquisa */
+.botao:focus {
+  outline: none;
+}
 
+/* caixa de pesquisa */
 .pesquisa {
   display: flex;
   align-items: center;
@@ -288,11 +286,7 @@ nav {
   fill: #b4b4b4;
 }
 
-
-
-
 /* tabela com lançamentos */
-
 .content {
   display: flex;
   justify-content: center;
@@ -311,7 +305,7 @@ th {
   width: 50px;
 }
 
-/* CHECKBOX */
+/* checkbox */
 .checkbox-container {
   display: inline-block;
   position: relative;
@@ -383,8 +377,7 @@ th {
   transform: scale(1);
 }
 
-/* CHECKBOX */
-
+/* tabela */
 .custom-table {
   min-width: 900px;
   border-collapse: collapse;
@@ -434,4 +427,35 @@ th {
 
 .custom-table .box td, .custom-table .box th {
   border: none !important;
+}
+
+/* modal recebimentos */
+
+.modal-recebimentos {
+  width: 80%;
+  margin: auto auto;
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 1em #00000013;
+  transition: 0.5s;
+}
+
+.fechar-recebimentos {
+  background-color: #9e0000;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  transition: all ease-in-out .5s;
+}
+
+.fechar-recebimentos:hover {
+  box-shadow: 0 0 1em #00000023;
+  background-color: #bb2f2f;
+}
+
+.fechar-recebimentos:focus {
+  outline: none;
 }
