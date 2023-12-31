@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fluxo-de-caixa.css">
+<link rel="shortcut icon" href="images/wayeasi-favicon.png" type="image/x-icon">
+    <title>WayEasi | Fluxo de Caixa</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Barra de Navegação Fixa -->
+        <nav class="nav-bar">
+            <a class="logo" href="#">WAYEASI</a>
+            <ul class="nav-list">
+                <li><a href="#">FLUXO DE CAIXA</a></li>
+                <li><a href="#">REALIZADO</a></li>
+                <li><a href="#">RELATÓRIOS</a></li>
+                <li><div class="line"></div></li>
+                <li><a href="#">CONFIGURAÇÕES</a></li>
+                <li><a href="#">MEU PERFIL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+
+        <!-- Caixa com Filtros à Esquerda -->
+        <div class="box-grid">
+            <section class="flex">
+                <label for="contas-contabeis">Contas Contábeis</label>
+                <select id="contas-contabeis">
+                    <option value="" disabled selected hidden>Selecione</option>
+                    <option value="opcao1">Receita 1</option>
+                    <option value="opcao2">Receita 2</option>
+                    <option value="opcao3">Despesa 1</option>
+                    <option value="opcao3">Despesa 2</option>
+                </select>
+            </section>
+            <section class="flex">
+                <label for="meses">Meses</label>
+                <select id="meses">
+                    <option value="" disabled selected hidden>Selecione</option>
+                    <option value="opcao1">Jan/23</option>
+                    <option value="opcao2">Fev/23</option>
+                    <option value="opcao3">Mar/23</option>
+                </select>
+            </section>
+            <section class="flex">
+                <label for="bancos">Bancos</label>
+                <select id="bancos">
+                    <option value="" disabled selected hidden>Selecione</option>
+                    <option value="opcao1">Itaú</option>
+                    <option value="opcao2">Sicoob</option>
+                    <option value="opcao3">Nubank</option>
+                </select>
+            </section>
+            <section class="flex">
+                <label for="data-inicio">De</label>
+                <input class="data" type="date" id="data-inicio">
+            </section>
+            <section class="flex">
+                <label for="data-fim">Até</label>
+                <input class="data" type="date" id="data-fim">
+            </section>
+            <section class="flex">
+                <label for="natureza">Natureza</label>
+                <select id="natureza">
+                    <option value="" disabled selected hidden>Selecione</option>
+                    <option value="opcao1">Crédito</option>
+                    <option value="opcao2">Débito</option>
+                </select>
+            </section>
+
+            <!-- Botões da Caixa com Filtros -->
+            <section>
+                <button class="botao recebimentos">
+                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                    </svg>
+                </button>
+            </section>
+            <section>
+                <button class="botao pagamentos">
+                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
+                    </svg>
+            </section>
+            <section>
+                <button class="botao transferencias">
+                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6v13m0 0 3-3m-3 3-3-3m11-2V1m0 0L9 4m3-3 3 3"/>
+                    </svg>
+                </button>
+            </section>
+        </div>
+
+        <!-- Caixa à Direita -->
+        <div>
+
+        </div>
+
+
+    </main>
+
+    <!-- Tabela com Lançamentos -->
+    <div class="content">
+        <div class="container">
+          <div class="table-responsive">
+            <table class="table custom-table">
+              <thead>
+                <tr>
+                  <th class="checkbox-col" scope="col"></th> <!-- Adiciona uma célula vazia para a checkbox -->
+                  <th scope="col">Vencimento</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Observação</th>
+                  <th scope="col">Parcela</th>
+                  <th scope="col">Débito</th>
+                  <th scope="col">Crédito</th>
+                  <th scope="col">Saldo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Conta de Luz</td>
+                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                  <td>11/12</td>
+                  <td>R$ 265,00</td>
+                  <td></td>
+                  <td>R$ 4.750,00</td>
+                </tr>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Licença de Software</td>
+                  <td>Ref. Nov23<small class="d-block">Pessoa: Lucas Wallace; Operação: Boleto</small></td>
+                  <td>11/12</td>
+                  <td></td>
+                  <td>R$ 265,00</td>
+                  <td>R$ 5.000,00</td>
+                </tr>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Conta de Luz</td>
+                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                  <td>11/12</td>
+                  <td>R$ 265,00</td>
+                  <td></td>
+                  <td>R$ 4.750,00</td>
+                </tr>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Conta de Luz</td>
+                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                  <td>11/12</td>
+                  <td>R$ 265,00</td>
+                  <td></td>
+                  <td>R$ 4.750,00</td>
+                </tr>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Conta de Luz</td>
+                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                  <td>11/12</td>
+                  <td>R$ 265,00</td>
+                  <td></td>
+                  <td>R$ 4.750,00</td>
+                </tr>
+                <tr scope="row">
+                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
+                  <td>31/12/2023</td>
+                  <td>Conta de Luz</td>
+                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                  <td>11/12</td>
+                  <td>R$ 265,00</td>
+                  <td></td>
+                  <td>R$ 4.750,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
