@@ -196,9 +196,50 @@
 
         <h1>Recebimentos</h1>
         
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae quae laudantium quam iste reiciendis? Nostrum facilis totam eos, hic ex consectetur, minus unde assumenda amet, quam laudantium eveniet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum eligendi nemo adipisci. Ad dignissimos quas tenetur eveniet quia omnis natus, aut repellendus consectetur dolore voluptate accusamus at placeat maxime libero. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quidem explicabo qui exercitationem, quas impedit, laborum, a excepturi facilis corrupti suscipit dicta doloribus placeat ea magnam? Eveniet aspernatur itaque expedita.
-        </p>
+        <form class="modal-form" action="#" method="post">
+            <section>
+                <label for="data">Data</label>
+                <input class="modal-data" type="date" name="data" required><br>
+            </section>
+        
+            <section>
+                <label for="descricao">Descrição</label>
+                <input class="modal-descricao" type="text" name="descricao" required><br>
+            </section>
+        
+            <section>
+                <label for="observacao">Observação</label>
+                <textarea class="modal-obs" name="observacao"></textarea><br>
+            </section>
+            
+                <section>
+                    <label for="valor">Valor (R$)</label>
+                    <input type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
+                </section>
+        
+            <section>
+                <label for="contaContabil">Conta Contábil</label>
+                <select id="contaContabil" name="contaContabil" required>
+                  <option value="conta1">Conta 1</option>
+                  <option value="conta2">Conta 2</option>
+                  <option value="conta3">Conta 3</option>
+                  <!-- Adicione mais opções conforme necessário -->
+                </select><br>
+            </section>
+        
+            <section>
+                <label for="recorrencia">Recorrência</label>
+                <select id="recorrencia" name="recorrencia" required>
+                  <option value="sim">Não</option>
+                  <option value="nao">Sim</option>
+                </select><br>
+            </section>
+        </form>
+        
+        
+        
+        
+        <input type="submit" value="Salvar">
         <button class="fechar-recebimentos">Cancelar</button>
 
     </dialog>

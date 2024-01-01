@@ -94,7 +94,7 @@ nav {
   font-size: 13px;
 }
 
-.flex > select, input {
+.flex > select, .flex > input {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -102,7 +102,7 @@ nav {
 }
 
   /* estilo das caixas de seleções e datas */
-.flex select, input {
+.flex select, .flex input {
   background-color: #f4f2f2;
   border: none;
   color: #3d3d3d;
@@ -238,6 +238,7 @@ nav {
 
 .caixa-pesquisa {
   margin: 0;
+  padding: 0.7rem 1rem;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   color: #3d3d3d;
@@ -430,16 +431,34 @@ th {
 }
 
 /* modal recebimentos */
-
 .modal-recebimentos {
   width: 80%;
   margin: auto auto;
   padding: 1rem 1rem;
   background-color: #fff;
+  border: none;
   border-radius: 1rem;
   box-shadow: 0 0 1em #00000013;
   transition: 0.5s;
+  font-family: 'Open Sans', sans-serif;
 }
+
+dialog > form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+dialog > form > section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10px 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+
 
 .fechar-recebimentos {
   background-color: #9e0000;
