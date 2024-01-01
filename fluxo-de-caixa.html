@@ -197,29 +197,29 @@
         <h1>Recebimentos</h1>
         
         <form class="modal-form" action="#" method="post">
-            <section>
+            <section class="modal-flex">
                 <label for="data">Data</label>
-                <input class="modal-data" type="date" name="data" required><br>
+                <input class="modal-data" type="date" id="data" name="data" required><br>
             </section>
         
-            <section>
+            <section class="modal-flex">
                 <label for="descricao">Descrição</label>
                 <input class="modal-descricao" type="text" name="descricao" required><br>
             </section>
         
-            <section>
+            <section class="modal-flex">
                 <label for="observacao">Observação</label>
-                <textarea class="modal-obs" name="observacao"></textarea><br>
+                <input class="modal-obs" name="observacao"></input><br>
             </section>
             
-                <section>
-                    <label for="valor">Valor (R$)</label>
-                    <input type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
-                </section>
+            <section class="modal-flex">
+                <label for="valor">Valor</label>
+                <input class="modal-valor" type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
+            </section>
         
-            <section>
+            <section class="modal-flex">
                 <label for="contaContabil">Conta Contábil</label>
-                <select id="contaContabil" name="contaContabil" required>
+                <select class="modal-conta-contabil" name="contaContabil" required>
                   <option value="conta1">Conta 1</option>
                   <option value="conta2">Conta 2</option>
                   <option value="conta3">Conta 3</option>
@@ -227,9 +227,9 @@
                 </select><br>
             </section>
         
-            <section>
+            <section class="modal-flex">
                 <label for="recorrencia">Recorrência</label>
-                <select id="recorrencia" name="recorrencia" required>
+                <select class="modal-recorrencia" name="recorrencia" required>
                   <option value="sim">Não</option>
                   <option value="nao">Sim</option>
                 </select><br>
@@ -239,8 +239,10 @@
         
         
         
-        <input type="submit" value="Salvar">
-        <button class="fechar-recebimentos">Cancelar</button>
+        <section class="modal-botoes">
+            <input class="modal-salvar" type="submit" value="Salvar">
+            <button class="modal-fechar">Cancelar</button>
+        </section>
 
     </dialog>
     <script src="modals.js"></script>
