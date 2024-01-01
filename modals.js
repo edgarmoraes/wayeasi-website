@@ -1,26 +1,55 @@
 const openModalRecebimentos = document.querySelector('.recebimentos');
-const closeModalRecebimentos = document.querySelector('.modal-fechar');
+const openModalPagamentos = document.querySelector('.pagamentos');
+const closeModalRecebimentos = document.querySelector('.modal-fechar-recebimentos');
+const closeModalPagamentos = document.querySelector('.modal-fechar-pagamentos');
 const modalRecebimentos = document.querySelector('.modal-recebimentos');
+const modalPagamentos = document.querySelector('.modal-pagamentos');
 
+    // Recebimentos
 openModalRecebimentos.addEventListener('click', () => {
+    modalAberto = modalRecebimentos; // Atualiza a variável para indicar que o modal de recebimentos está aberto
     modalRecebimentos.showModal(); // Abre o modal
     document.body.style.overflow = 'hidden'; // Esconde a barra de rolagem
 });
 
 closeModalRecebimentos.addEventListener('click', () => {
-    closeModal(); // Fecha o modal
-    document.querySelector(".modal-form").reset(); // Limpa os campos do formulário
+    closeRecebimentos(); // Fecha o modal
+    document.querySelector(".modal-form-recebimentos").reset(); // Limpa os campos do formulário
 });
 
 modalRecebimentos.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        closeModal(); // Fecha o modal com ESC
-        document.querySelector(".modal-form").reset(); // Limpa os campos do formulário
+        closeRecebimentos(); // Fecha o modal com ESC
+        document.querySelector(".modal-form-recebimentos").reset(); // Limpa os campos do formulário
     }
 });
 
-function closeModal() {
+function closeRecebimentos() {
     modalRecebimentos.close();
+    document.body.style.overflow = ''; // Faz a barra de rolagem reaparecer
+}
+
+    // Pagamentos
+openModalPagamentos.addEventListener('click', () => {
+    modalAberto = modalPagamentos; // Atualiza a variável para indicar que o modal de pagamentos está aberto
+    modalPagamentos.showModal(); // Abre o modal
+    document.body.style.overflow = 'hidden'; // Esconde a barra de rolagem
+});
+
+closeModalPagamentos.addEventListener('click', () => {
+    closePagamentos(); // Fecha o modal
+    document.querySelector(".modal-form-pagamentos").reset(); // Limpa os campos do formulário
+});
+
+modalPagamentos.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closePagamentos(); // Fecha o modal com ESC
+        document.querySelector(".modal-form-pagamentos").reset(); // Limpa os campos do formulário
+    }
+});
+
+function closePagamentos() {
+    modalPagamentos.close();
     document.body.style.overflow = ''; // Faz a barra de rolagem reaparecer
 }
 
@@ -41,8 +70,9 @@ document.addEventListener('keydown', function(event) {
     }
     });
 
-    function preencherDataEFocus() {
-    var dataCampo = document.getElementById("data");
+function preencherDataEFocus() {
+    var dataCampo1 = document.getElementById("data1");
+    var dataCampo2 = document.getElementById("data2");
 
     // Obter a data atual
     var dataAtual = new Date();
@@ -52,9 +82,15 @@ document.addEventListener('keydown', function(event) {
 
     // Formatando como "yyyy-mm-dd" para ser aceito pelo campo de data
     var dataFormatada = ano + '-' + mes + '-' + dia;
-    
-    dataCampo.value = dataFormatada;
+
+    // Preenche os campos de data apenas no modal que está aberto
+    if (modalAberto === modalRecebimentos) {
+        dataCampo1.value = dataFormatada;
+    } else if (modalAberto === modalPagamentos) {
+        dataCampo2.value = dataFormatada;
+    }
 
     // Move o foco para o campo de descrição
-    document.querySelector(".modal-descricao").focus();
-    }
+    document.getElementById('descricao1').focus();
+    document.getElementById('descricao2').focus();
+}
