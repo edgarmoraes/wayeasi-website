@@ -443,9 +443,26 @@ th {
   font-family: 'Open Sans', sans-serif;
 }
 
+.modal-transferencias {
+  width: 40%;
+  margin: auto auto;
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1em #00000013;
+  transition: 0.5s;
+  font-family: 'Open Sans', sans-serif;
+}
+
 dialog > form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.modal-transferencias > form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 dialog > form > section {
@@ -457,7 +474,6 @@ dialog > form > section {
   font-weight: 700;
   font-size: 13px;
 }
-
 
 
 
@@ -507,7 +523,7 @@ dialog > form > section {
   margin: 0 2rem;
 }
 
-.modal-fechar-recebimentos, .modal-fechar-pagamentos {
+.modal-fechar-recebimentos, .modal-fechar-pagamentos, .modal-fechar-transferencias {
   background-color: #9e0000;
   border: none;
   color: #ffffff;
@@ -517,12 +533,12 @@ dialog > form > section {
   transition: all ease-in-out .2s;
 }
 
-.modal-fechar-recebimentos:hover, .modal-fechar-pagamentos:hover {
+.modal-fechar-recebimentos:hover, .modal-fechar-pagamentos:hover, .modal-fechar-transferencias:hover {
   box-shadow: 0 0 1em #00000023;
   background-color: #bb2f2f;
 }
 
-.modal-fechar-recebimentos:focus, .modal-fechar-pagamentos:focus {
+.modal-fechar-recebimentos:focus, .modal-fechar-pagamentos:focus, .modal-fechar-transferencias:focus {
   outline: none;
 }
 

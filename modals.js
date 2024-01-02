@@ -1,9 +1,12 @@
 const openModalRecebimentos = document.querySelector('.recebimentos');
 const openModalPagamentos = document.querySelector('.pagamentos');
+const openModalTransferencias = document.querySelector('.transferencias');
 const closeModalRecebimentos = document.querySelector('.modal-fechar-recebimentos');
 const closeModalPagamentos = document.querySelector('.modal-fechar-pagamentos');
+const closeModalTransferencias = document.querySelector('.modal-fechar-transferencias');
 const modalRecebimentos = document.querySelector('.modal-recebimentos');
 const modalPagamentos = document.querySelector('.modal-pagamentos');
+const modalTransferencias = document.querySelector('.modal-transferencias');
 
     // Recebimentos
 openModalRecebimentos.addEventListener('click', () => {
@@ -53,14 +56,43 @@ function closePagamentos() {
     document.body.style.overflow = ''; // Faz a barra de rolagem reaparecer
 }
 
+    // Transferências
+openModalTransferencias.addEventListener('click', () => {
+    modalAberto = modalTransferencias; // Atualiza a variável para indicar que o modal de transferências está aberto
+    modalTransferencias.showModal(); // Abre o modal
+    document.body.style.overflow = 'hidden'; // Esconde a barra de rolagem
+});
+
+closeModalTransferencias.addEventListener('click', () => {
+    closeTransferencias(); // Fecha o modal
+    document.querySelector(".modal-form-transferencias").reset(); // Limpa os campos do formulário
+});
+
+modalTransferencias.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeTransferencias(); // Fecha o modal com ESC
+        document.querySelector(".modal-form-transferencias").reset(); // Limpa os campos do formulário
+    }
+});
+
+function closeTransferencias() {
+    modalTransferencias.close();
+    document.body.style.overflow = ''; // Faz a barra de rolagem reaparecer
+}
+
 function formatarCampoValor(input) {
-    var valor = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    // Obtém apenas os dígitos do valor atual
+    var valorNumerico = input.value.replace(/\D/g, '');
 
-    // Verifica se o resultado é NaN
-    valor = isNaN(parseFloat(valor)) ? "0,00" : (parseFloat(valor) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    // Converte o valor para número
+    var valorDecimal = parseFloat(valorNumerico) / 100;
 
-    input.value = valor;
-  }
+    // Formata o valor como moeda brasileira
+    var valorFormatado = valorDecimal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // Adiciona o "R$" ao valor formatado e atualiza o campo
+    input.value = "R$ " + (isNaN(valorDecimal) ? "0,00" : valorFormatado.replace('R$', '').trim());
+}
 
 // Adiciona um evento de teclado para detectar 'Shift + D'
 document.addEventListener('keydown', function(event) {
@@ -71,8 +103,9 @@ document.addEventListener('keydown', function(event) {
     });
 
 function preencherDataEFocus() {
-    var dataCampo1 = document.getElementById("data1");
-    var dataCampo2 = document.getElementById("data2");
+    var dataCampo1 = document.getElementById("data-recebimentos");
+    var dataCampo2 = document.getElementById("data-pagamentos");
+    var dataCampo3 = document.getElementById("data-transferencias");
 
     // Obter a data atual
     var dataAtual = new Date();
@@ -86,11 +119,16 @@ function preencherDataEFocus() {
     // Preenche os campos de data apenas no modal que está aberto
     if (modalAberto === modalRecebimentos) {
         dataCampo1.value = dataFormatada;
-    } else if (modalAberto === modalPagamentos) {
+    }
+    else if (modalAberto === modalPagamentos) {
         dataCampo2.value = dataFormatada;
+    }
+    else if (modalAberto === modalTransferencias) {
+        dataCampo3.value = dataFormatada;
     }
 
     // Move o foco para o campo de descrição
-    document.getElementById('descricao1').focus();
-    document.getElementById('descricao2').focus();
+    document.getElementById('descricao-recebimentos').focus();
+    document.getElementById('descricao-pagamentos').focus();
+    document.getElementById('valor-transferencias').focus();
 }
