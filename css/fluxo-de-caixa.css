@@ -1,6 +1,26 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* universal */
+/* Estilos Universais */
+:root {
+  --primary-font: 'Open Sans', sans-serif;
+  --transition-duration1: 0.3s;
+  --transition-duration2: 0.2s;
+  --transition-effect1: all ease-in-out;
+  --box-shadow1: 0 0 1em #00000013;
+  --box-shadow2: 0 0 1em #00000023;
+  --branco: #ffffff;
+  --preto: #000000;
+  --color1: #f0eeee;
+  --color2: #f4f2f2;
+  --color3: #B1C381;
+  --color4: #3d3d3d;
+  --color5: #006919;
+  --color6: #740000;
+  --color7: #9bb8cd;
+  --color8: #f87c7c;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,9 +32,9 @@ html {
 }
 
 a {
-  color: #fff;
+  color: var(--branco);
   text-decoration: none;
-  transition: 0.3s;
+  transition: var(--transition-duration1);
 }
 
 a:hover {
@@ -26,7 +46,7 @@ a:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* barra de navegação fixa */
+/* Barra de Navegação Fixa */
 .logo {
   font-size: 24px;
   letter-spacing: 4px;
@@ -44,14 +64,14 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--primary-font);
   background-color: #3d3d40bf;
   height: 8vh;
   backdrop-filter: blur(5px);
 }
 
 .nav-list {
-  display: flex; 
+  display: flex;
   list-style: none;
 }
 
@@ -62,21 +82,21 @@ nav {
 }
 
 .line {
-  border: 0.5px solid white;
+  border: 0.5px solid var(--branco);
   margin-top: 1.8px;
   height: 16px;
 }
 
-/* components */
+/* Componentes da Caixa de Filtros */
 .box-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 700px;
   margin: 4.5rem auto 1rem auto;
   padding: 1rem 1rem;
-  background-color: #fff;
+  background-color: var(--branco);
   border-radius: 1rem;
-  box-shadow: 0 0 1em #00000013;
+  box-shadow: var(--box-shadow1);
 }
 
 .mesclar-3 {
@@ -88,42 +108,40 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 10px;
-  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  font-family: var(--primary-font);
   font-weight: 700;
   font-size: 13px;
 }
 
 .flex > select, .flex > input {
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--primary-font);
   font-size: 15px;
   margin-top: 5px;
 }
 
-  /* estilo das caixas de seleções e datas */
+/* Estilos dos Selects e Inputs */
 .flex select, .flex input {
-  background-color: #f4f2f2;
+  background-color: var(--color2);
   border: none;
-  color: #3d3d3d;
+  color: var(--color4);
   padding: 0.7rem 1rem;
   border-radius: 5px;
-  transition: all ease-in-out .5s;
+  transition: var(--transition-effect1) var(--transition-duration1);
 }
 
-.flex select:hover, .flex select:focus {
-  box-shadow: 0 0 1em #00000013;
-}
+.flex select:hover, .flex select:focus,
 .flex input:hover, .flex input:focus {
-  box-shadow: 0 0 1em #00000013;
+  box-shadow: var(--box-shadow1);
 }
 
 .flex select, input:focus {
   outline: none;
-  background-color: #f0eeee;
+  background-color: var(--color1);
 }
 
-  /* botões */
+/* Botões para Lançamentos */
 .botao {
   margin: 10px auto;
   width: 50px;
@@ -134,9 +152,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  box-shadow: 0px 0px 20px #0000002a;
   cursor: pointer;
-  transition-duration: .3s;
+  transition-duration: var(--transition-duration1);
   overflow: hidden;
   position: relative;
 }
@@ -146,92 +164,87 @@ nav {
 }
 
 .pagamentos {
-  background-color: #740000;
+  background-color: var(--color6);
 }
 
 .transferencias {
-  background-color: #006919;
+  background-color: var(--color5);
 }
 
 .svgIcon {
   width: 12px;
-  transition-duration: .3s;
+  transition-duration: var(--transition-duration1);
 }
 
 .svgIcon path {
-  fill: white;
+  fill: var(--branco);
 }
 
 .botao:hover {
   width: 140px;
   border-radius: 50px;
-  transition-duration: .3s;
+  transition-duration: var(--transition-duration1);
   align-items: center;
 }
 
 .recebimentos:hover {
-  background-color: rgb(155, 184, 205);
+  background-color: var(--color7);
 }
 
 .pagamentos:hover {
-  background-color: rgb(248, 124, 124);
+  background-color: var(--color8);
 }
 
 .transferencias:hover {
-  background-color: #B1C381;
+  background-color: var(--color3);
 }
 
 .botao:hover .svgIcon {
   width: 50px;
-  transition-duration: .3s;
+  transition-duration: var(--transition-duration1);
   transform: translateY(60%);
 }
 
-.recebimentos::before {
-  position: absolute;
-  top: -20px;
-  content: "Recebimentos";
-  color: white;
-  transition-duration: .3s;
-  font-size: 2px;
-}
-
-.pagamentos::before {
-  position: absolute;
-  top: -20px;
-  content: "Pagamentos";
-  color: white;
-  transition-duration: .3s;
-  font-size: 2px;
-}
-
+.recebimentos::before,
+.pagamentos::before,
 .transferencias::before {
   position: absolute;
   top: -20px;
-  content: "Transferências";
-  color: white;
-  transition-duration: .3s;
+  color: var(--branco);
+  transition-duration: var(--transition-duration1);
   font-size: 2px;
+}
+
+.botao:hover.recebimentos::before {
+  content: "Recebimentos";
+}
+
+.botao:hover.pagamentos::before {
+  content: "Pagamentos";
+}
+
+.botao:hover.transferencias::before {
+  content: "Transferências";
 }
 
 .botao:hover::before {
   font-size: 13px;
   opacity: 1;
   transform: translateY(30px);
-  transition-duration: .3s;
+  transition-duration: var(--transition-duration1);
 }
 
 .botao:focus {
   outline: none;
 }
 
-/* caixa de pesquisa */
+/* Caixa de Pesquisa */
 .pesquisa {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 10px 10px;
-  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  font-family: var(--primary-font);
   font-weight: 700;
   font-size: 15px;
 }
@@ -240,31 +253,31 @@ nav {
   margin: 0;
   padding: 0.7rem 1rem;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
-  color: #3d3d3d;
-  background-color: #f4f2f2;
+  font-family: var(--primary-font);
+  color: var(--color4);
+  background-color: var(--color2);
   font-size: 15px;
   border: none;
   border-radius: 30px;
-  transition: all ease-in-out .5s;
+  transition: var(--transition-effect1) var(--transition-duration1);
 }
 
 .caixa-pesquisa:hover, .caixa-pesquisa:focus {
-  box-shadow: 0 0 1em #00000013;
+  box-shadow: var(--box-shadow1);
 }
 
 .caixa-pesquisa:focus {
   outline: none;
-  background-color: #f0eeee;
+  background-color: var(--color1);
 }
 
 .caixa-pesquisa::-webkit-input-placeholder {
   font-weight: 400;
-  color: #3d3d3d;
+  color: var(--color4);
 }
 
 .caixa-pesquisa:focus + .botao-pesquisa {
-  background-color: #f0eeee;
+  background-color: var(--color1);
 }
 
 .botao-pesquisa {
@@ -274,7 +287,7 @@ nav {
   position: absolute;
   margin-right: 1rem;
   border: none;
-  background-color: #f4f2f2;
+  background-color: var(--color2);
 }
 
 .botao-pesquisa:hover {
@@ -287,13 +300,14 @@ nav {
   fill: #b4b4b4;
 }
 
-/* tabela com lançamentos */
+
+/* Tabela com Lançamentos */
 .content {
   display: flex;
   justify-content: center;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
+  background-color: var(--branco);
   font-weight: 300;
 }
 
@@ -306,7 +320,7 @@ th {
   width: 50px;
 }
 
-/* checkbox */
+/* Checkbox */
 .checkbox-container {
   display: inline-block;
   position: relative;
@@ -332,10 +346,10 @@ th {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: var(--color2);
   border-radius: 4px;
-  transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-duration1);
+  box-shadow: 0 2px 5px #00000033;
 }
 
 .checkmark:after {
@@ -346,14 +360,14 @@ th {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid var(--branco);
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
 
 .custom-checkbox:checked ~ .checkmark {
-  background-color: #2196F3;
-  box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+  background-color: var(--color7);
+  box-shadow: 0 3px 7px #2196f34d;
 }
 
 .custom-checkbox:checked ~ .checkmark:after {
@@ -378,7 +392,7 @@ th {
   transform: scale(1);
 }
 
-/* tabela */
+/* Tabela */
 .custom-table {
   min-width: 900px;
   border-collapse: collapse;
@@ -391,8 +405,7 @@ th {
 }
 
 .custom-table tbody th, .custom-table tbody td {
-  color: #1f1f1f;
-  font-weight: 400;
+  color: var(--color4);
   padding-bottom: 20px;
   padding-top: 20px;
   font-weight: 300;
@@ -401,18 +414,16 @@ th {
 
 .custom-table tbody th small, .custom-table tbody td small {
   display: block;
-  color: #616161;
+  color: var(--color4);
   font-weight: 300;
 }
 
 .custom-table tbody tr {
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
   transition: .3s all ease;
 }
 
 .custom-table tbody tr:hover, .custom-table tbody tr:focus {
-  background: #efefef;
+  background: var(--color1);
 }
 
 .custom-table .td-box-wrap {
@@ -420,44 +431,55 @@ th {
 }
 
 .custom-table .box {
-  background: #fff;
+  background: var(--branco);
   border-radius: 4px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.custom-table .box td, .custom-table .box th {
+.custom-table .box td, 
+.custom-table .box th {
   border: none !important;
 }
 
-/* modal recebimentos */
-.modal-recebimentos, .modal-pagamentos {
+/* Modais */
+.modal-recebimentos,
+.modal-pagamentos,
+.modal-transferencias {
   width: 80%;
   margin: auto auto;
-  padding: 1rem 1rem;
-  background-color: #fff;
+  padding: 2rem;
+  background-color: var(--branco);
   border: none;
   border-radius: 1rem;
-  box-shadow: 0 0 1em #00000013;
-  transition: 0.5s;
+  box-shadow: var(--box-shadow1);
+  transition: var(--transition-duration1);
   font-family: 'Open Sans', sans-serif;
 }
 
 .modal-transferencias {
   width: 40%;
-  margin: auto auto;
-  padding: 1rem 1rem;
-  background-color: #fff;
-  border: none;
-  border-radius: 1rem;
-  box-shadow: 0 0 1em #00000013;
-  transition: 0.5s;
-  font-family: 'Open Sans', sans-serif;
+}
+
+.mesclar-2 {
+  grid-column: span 2;
+}
+
+.modal-recebimentos::backdrop,
+.modal-pagamentos::backdrop,
+.modal-transferencias::backdrop {
+  overflow-y: scroll !important;
+  max-height: 100% !important;
+}
+
+.modal-titulo {
+  margin-bottom: 1rem;
 }
 
 dialog > form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .modal-transferencias > form {
@@ -465,98 +487,93 @@ dialog > form {
   grid-template-columns: repeat(2, 1fr);
 }
 
-dialog > form > section {
+dialog > form  > section {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 10px 10px;
+  margin: 5px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 13px;
 }
 
-
-
-
-.modal-flex > select, .modal-flex > input {
+.modal-flex > select,
+.modal-flex > input {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   margin-top: 5px;
 }
 
-  /* estilo das caixas de seleções e datas */
-.modal-flex select, .modal-flex input {
-  background-color: #f4f2f2;
+/* Estilo das Caixas de Seleções e Datas */
+.modal-flex select,
+.modal-flex input {
+background-color: var(--color2);
   border: none;
-  color: #3d3d3d;
+  color: var(--color4);
   padding: 0.7rem 1rem;
   border-radius: 5px;
-  transition: all ease-in-out .5s;
+  transition: var(--transition-effect1) .5s;
 }
 
-.modal-flex select:hover, .modal-flex select:focus {
-  box-shadow: 0 0 1em #00000013;
-}
-.modal-flex input:hover, .modal-flex input:focus {
-  box-shadow: 0 0 1em #00000013;
+.modal-flex select:hover,
+.modal-flex select:focus,
+.modal-flex input:hover,
+.modal-flex input:focus {
+  box-shadow: var(--box-shadow1);
 }
 
-.modal-flex select, input:focus {
+.modal-flex select,
+input:focus {
   outline: none;
-  background-color: #f0eeee;
+  background-color: var(--color1);
 }
 
-
-
-
-
-
-
-
-
-
+/* Botões dos Modais */
 .modal-botoes {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
   justify-content: flex-end;
-  margin: 0 2rem;
+  margin: 1rem 0 0 0;
 }
 
-.modal-fechar-recebimentos, .modal-fechar-pagamentos, .modal-fechar-transferencias {
-  background-color: #9e0000;
-  border: none;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 0.7rem 1rem;
-  border-radius: 5px;
-  transition: all ease-in-out .2s;
-}
-
-.modal-fechar-recebimentos:hover, .modal-fechar-pagamentos:hover, .modal-fechar-transferencias:hover {
-  box-shadow: 0 0 1em #00000023;
-  background-color: #bb2f2f;
-}
-
-.modal-fechar-recebimentos:focus, .modal-fechar-pagamentos:focus, .modal-fechar-transferencias:focus {
-  outline: none;
-}
-
+.modal-fechar-recebimentos,
+.modal-fechar-pagamentos,
+.modal-fechar-transferencias,
 .modal-salvar {
-  background-color: #0d9c00;
   border: none;
-  color: #ffffff;
+  color: var(--branco);
   font-weight: 700;
   padding: 0.7rem 1rem;
   border-radius: 5px;
-  transition: all ease-in-out .2s;
+  transition: var(--transition-effect1) var(--transition-duration2);
 }
 
-.modal-salvar:hover {
-  box-shadow: 0 0 1em #00000023;
-  background-color: #B1C381;
-}
-
+.modal-fechar-recebimentos:focus,
+.modal-fechar-pagamentos:focus,
+.modal-fechar-transferencias:focus,
 .modal-salvar:focus {
   outline: none;
 }
+
+.modal-fechar-recebimentos:hover,
+.modal-fechar-pagamentos:hover,
+.modal-fechar-transferencias:hover {
+  background-color: var(--color8);
+  box-shadow: var(--box-shadow2);
+}
+
+.modal-fechar-recebimentos,
+.modal-fechar-pagamentos,
+.modal-fechar-transferencias {
+  background-color: var(--color6);
+}
+
+.modal-salvar {
+  background-color: var(--color5);
+}
+
+.modal-salvar:hover {
+  background-color: var(--color3);
+  box-shadow: var(--box-shadow2);
+}
+
