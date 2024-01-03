@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Estilos Universais */
+:root {
+    --primary-font: 'Open Sans', sans-serif;
+    --transition-duration1: 0.3s;
+    --transition-duration2: 0.2s;
+    --transition-effect1: all ease-in-out;
+    --box-shadow1: 0 0 1em #00000013;
+    --box-shadow2: 0 0 1em #00000023;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --color1: #F0EEEE;
+    --color2: #F4F2F2;
+    --color3: #B1C381;
+    --color4: #3D3D40;
+    --color5: #006919;
+    --color6: #740000;
+    --color7: #9BB8CD;
+    --color8: #F87C7C;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: var(--transition-duration1);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Barra de Navegação Fixa */
+.logo {
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--primary-font);
+    background-color: #3d3d40bf;
+    height: 8vh;
+    backdrop-filter: blur(5px);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 48px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.line {
+    border: 0.5px solid var(--branco);
+    margin-top: 1.8px;
+    height: 16px;
+}
+
+/* Títulos */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1vh;
+    width: 100%;
+    height: 16vh;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    color: var(--branco);
+    background-color: var(--color3);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Área do Acordeão */
+section {
+    margin: 20px;
+    width: 80%;
+}
+
+form {
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 5rem;
+}
+
+.permissions {
+    background-color: var(--color2);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+form > input,
+form > textarea {
+    font-family: var(--primary-font);
+}
+
+.permissions ul {
+    list-style-type: none;
+}
+
+.permissions li {
+    margin-bottom: 5px;
+}
+
+.permissions > p {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+/* Acordeão */
+.accordion-section {
+    margin: 20px;
+    font-family: var(--primary-font);
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--color4);
+    transition: var(--transition-effect1) var(--transition-duration1);
+}
+
+.accordion-section input,
+.accordion-section textarea {
+    padding: 0.7rem 1rem;
+    background-color: var(--color2);
+    border: none;
+    color: var(--color4);
+    border-radius: 5px;
+    transition: var(--transition-effect1) var(--transition-duration1);
+}
+
+.accordion-section:hover {
+    box-shadow: var(--box-shadow1);
+}
+
+.accordion-section input:focus,
+.accordion-section textarea:focus {
+    outline: none;
+}
+
+.accordion-section-permissions {
+    margin-bottom: 8vh;
+}
+
+.accordion-title {
+    padding: 15px;
+    cursor: pointer;
+    background-color: var(--color2);
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-content {
+    padding: 10px;
+    max-height: 1px; /* Inicialmente definido para 1px para ocultar completamente o conteúdo */
+    overflow-y: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Adicionando transições suaves */
+    pointer-events: none; /* Desativando a interação durante a transição */
+}
+
+.accordion-section.open .accordion-content {
+    overflow-y: hidden; /* Adicionando scroll quando o conteúdo ultrapassar a altura máxima */
+    pointer-events: auto; /* Reativando a interação quando a seção está aberta */
+}
+
+/* Botões */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    font-family: var(--primary-font);
+    font-size: 13px;
+    color: var(--branco);
+    background: var(--color4);
+    fill: var(--branco);
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--color4);
+}
+
+button:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+}
+
+button:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: var(--branco);
+}
+
+button:hover span {
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Rodapé */
+footer {
+    position: fixed;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    background-color: var(--color2);
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+}

@@ -13,12 +13,12 @@
         <nav class="nav-bar">
             <a class="logo" href="#">WAYEASI</a>
             <ul class="nav-list">
-                <li><a href="#">FLUXO DE CAIXA</a></li>
+                <li><a href="fluxo-de-caixa.html">FLUXO DE CAIXA</a></li>
                 <li><a href="#">REALIZADO</a></li>
                 <li><a href="#">RELATÓRIOS</a></li>
                 <li><div class="line"></div></li>
                 <li><a href="#">CONFIGURAÇÕES</a></li>
-                <li><a href="#">MEU PERFIL</a></li>
+                <li><a href="meu-perfil.html">MEU PERFIL</a></li>
             </ul>
         </nav>
     </header>
@@ -103,7 +103,7 @@
                         <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
                     </svg>
             </section>
-            <!-- ############### Filtro de Transferênciasz ############### -->
+            <!-- ############### Filtro de Transferências ############### -->
             <section>
                 <button class="botao transferencias">
                     <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
@@ -112,9 +112,38 @@
                 </button>
             </section>
         </div>
+        <!-- ############### Tabela de Bancos ############### -->
+        <div class="box-grid-bancos">
+            <div class="conteudo-tabela-bancos">
+            <table class="tabela-bancos">
+                <thead class="cabecalho-bancos">
+                    <tr class="linha-cabecalho-bancos">
+                        <th class="contas-bancos-col" scope="col">Contas</th>
+                        <th class="ag-bancos-col" scope="col">Ag.</th>
+                        <th class="conta-bancos-col" scope="col">Conta</th>
+                        <th class="saldo-bancos-col" scope="col">Saldo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-bancos" scope="row">
+                        <td class="banco-row">Itaú</td>
+                        <td class="ag-row">0404</td>
+                        <td class="conta-row">10010-0</td>
+                        <td class="saldo-banco-row">000.000.000.000,00</td>
+                    </tr>
+                    <tr class="row-bancos" scope="row">
+                        <td class="banco-row">Sicoob</td>
+                        <td class="ag-row">5935</td>
+                        <td class="conta-row">85496-3</td>
+                        <td class="saldo-banco-row">000.000.000.000,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
     </main>
 
-    <!-- ############### Janelas de Lançamentos ############### -->
+    <!-- ############### Janelas/Modais de Lançamentos ############### -->
     <dialog class="modal-recebimentos">
 
         <h1 class="modal-titulo">Recebimentos</h1>
@@ -255,87 +284,43 @@
     </dialog>
 
     <!-- ############### Tabela com Lançamentos ############### -->
-    <div class="content">
-        <div class="container">
-          <div class="table-responsive">
-            <table class="table custom-table">
-              <thead>
-                <tr>
-                  <th class="checkbox-col" scope="col"></th> <!-- Adiciona uma célula vazia para a checkbox -->
-                  <th scope="col">Vencimento</th>
-                  <th scope="col">Descrição</th>
-                  <th scope="col">Observação</th>
-                  <th scope="col">Parcela</th>
-                  <th scope="col">Débito</th>
-                  <th scope="col">Crédito</th>
-                  <th scope="col">Saldo</th>
+    <div class="conteudo-tabela-lancamentos">
+        <table class="tabela-lancamentos">
+            <thead class="cabecalho-lancamentos">
+                <tr class="linha-cabecalho-lancamentos">
+                    <th class="checkbox-col" scope="col"></th>
+                    <th class="vencimento-col" scope="col">Vencimento</th>
+                    <th class="descricao-col" scope="col">Descrição</th>
+                    <th class="obs-col" scope="col">Observação</th>
+                    <th class="parcela-col" scope="col">Parcela</th>
+                    <th class="debito-col" scope="col">Débito</th>
+                    <th class="credito-col" scope="col">Crédito</th>
+                    <th class="saldo-col" scope="col">Saldo</th>
                 </tr>
-              </thead>
-              <tbody>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Conta de Luz</td>
-                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
-                  <td>11/12</td>
-                  <td>R$ 265,00</td>
-                  <td></td>
-                  <td>R$ 4.750,00</td>
+            </thead>
+            <tbody>
+                <tr class="row-lancamentos" scope="row">
+                    <td class="checkbox-row"><label class="checkbox-container"><input class="checkbox-personalizado" type="checkbox"><span class="checkmark"></span></label></td>
+                    <td class="vencimento-row">31/12/2023</td>
+                    <td class="descricao-row">Conta de Luz</td>
+                    <td class="obs-row">Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
+                    <td class="parcela-row">11/12</td>
+                    <td class="debito-row">000.000.000.000,00</td>
+                    <td class="credito-row">000.000.000.000,00</td>
+                    <td class="saldo-row">000.000.000.000,00</td>
                 </tr>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Licença de Software</td>
-                  <td>Ref. Nov23<small class="d-block">Pessoa: Lucas Wallace; Operação: Boleto</small></td>
-                  <td>11/12</td>
-                  <td></td>
-                  <td>R$ 265,00</td>
-                  <td>R$ 5.000,00</td>
+                <tr class="row-lancamentos" scope="row">
+                    <td class="checkbox-row"><label class="checkbox-container"><input class="checkbox-personalizado" type="checkbox"><span class="checkmark"></span></label></td>
+                    <td class="vencimento-row">31/12/2023</td>
+                    <td class="descricao-row">Recebimento de Assinatura | Pacote Mensal Beta 1</td>
+                    <td class="obs-row">Ref. Nov23<small class="d-block">Cliente: Bill Gates; Operação: Boleto</small></td>
+                    <td class="parcela-row">11/12</td>
+                    <td class="debito-row">000.000.000.000,00</td>
+                    <td class="credito-row">000.000.000.000,00</td>
+                    <td class="saldo-row">000.000.000.000,00</td>
                 </tr>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Conta de Luz</td>
-                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
-                  <td>11/12</td>
-                  <td>R$ 265,00</td>
-                  <td></td>
-                  <td>R$ 4.750,00</td>
-                </tr>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Conta de Luz</td>
-                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
-                  <td>11/12</td>
-                  <td>R$ 265,00</td>
-                  <td></td>
-                  <td>R$ 4.750,00</td>
-                </tr>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Conta de Luz</td>
-                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
-                  <td>11/12</td>
-                  <td>R$ 265,00</td>
-                  <td></td>
-                  <td>R$ 4.750,00</td>
-                </tr>
-                <tr scope="row">
-                  <td><label class="checkbox-container"><input class="custom-checkbox" type="checkbox"><span class="checkmark"></span></label></td>
-                  <td>31/12/2023</td>
-                  <td>Conta de Luz</td>
-                  <td>Ref. Nov23<small class="d-block">Empresa: Light; Operação: PIX</small></td>
-                  <td>11/12</td>
-                  <td>R$ 265,00</td>
-                  <td></td>
-                  <td>R$ 4.750,00</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+            </tbody>
+        </table>
     </div>
     <script src="modals.js"></script>
 </body>

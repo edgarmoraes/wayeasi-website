@@ -10,15 +10,16 @@
   --box-shadow1: 0 0 1em #00000013;
   --box-shadow2: 0 0 1em #00000023;
   --branco: #ffffff;
+  --branco: #FFFFFF;
   --preto: #000000;
-  --color1: #f0eeee;
-  --color2: #f4f2f2;
+  --color1: #F0EEEE;
+  --color2: #F4F2F2;
   --color3: #B1C381;
-  --color4: #3d3d3d;
+  --color4: #3D3D40;
   --color5: #006919;
   --color6: #740000;
-  --color7: #9bb8cd;
-  --color8: #f87c7c;
+  --color7: #9BB8CD;
+  --color8: #F87C7C;
 }
 
 html {
@@ -302,22 +303,108 @@ nav {
 
 
 /* Tabela com Lançamentos */
-.content {
+.conteudo-tabela-lancamentos {
   display: flex;
   justify-content: center;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--primary-font);
   background-color: var(--branco);
+  font-weight: 300;
+  color: var(--color4);
+}
+
+.tabela-lancamentos {
+  margin: 10px;
+  min-width: 900px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tabela-lancamentos0 th,
+.tabela-lancamentos0 td {
+  padding: 5px 10px;
+  overflow: hidden; /* Oculta o conteúdo excedente */
+  white-space: nowrap; /* Impede a quebra de texto */
+  text-overflow: ellipsis; /* Adiciona reticências (...) para indicar que há mais texto */
+}
+
+.tabela-lancamentos th {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tabela-lancamentos td {
+  font-size: 12px;
   font-weight: 300;
 }
 
-th {
-  width: 200px;
-  height: 50px;
+.tabela-lancamentos th small,
+.tabela-lancamentos td small {
+  display: block;
+  color: var(--color4);
+  font-weight: 300;
+}
+
+.tabela-lancamentos tbody tr:hover,
+.tabela-lancamentos tbody tr:focus {
+  background: var(--color1);
+}
+
+.tabela-lancamentos tbody tr {
+  transition: .3s all ease;
+}
+
+.row-lancamentos {
+  height: 40px;
+  border-bottom: 1px solid var(--color2);
 }
 
 .checkbox-col {
-  width: 50px;
+  width: 40px;
+}
+
+.vencimento-col {
+  width: 100px;
+}
+
+.descricao-col {
+  width: 300px;
+}
+
+.obs-col {
+  width: 450px;
+}
+
+.parcela-col {
+  width: 60px;
+}
+
+.debito-col,
+.credito-col,
+.saldo-col {
+  width: 120px;
+}
+
+.checkbox-row {
+  text-align: center;
+}
+
+.vencimento-row,
+.parcela-row,
+.debito-row,
+.credito-row,
+.saldo-row {
+  text-align: center;
+  overflow: hidden; /* Oculta o conteúdo excedente */
+  white-space: nowrap; /* Impede a quebra de texto */
+  text-overflow: ellipsis; /* Adiciona reticências (...) para indicar que há mais texto */
+}
+
+.descricao-row,
+.obs-row {
+  padding: 5px 20px;
 }
 
 /* Checkbox */
@@ -327,12 +414,13 @@ th {
   padding-left: 35px;
   margin-left: 15px;
   margin-bottom: 20px;
+  text-align: center;
   cursor: pointer;
   font-size: 16px;
   user-select: none;
 }
 
-.custom-checkbox {
+.checkbox-personalizado {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -365,12 +453,12 @@ th {
   transform: rotate(45deg);
 }
 
-.custom-checkbox:checked ~ .checkmark {
+.checkbox-personalizado:checked ~ .checkmark {
   background-color: var(--color7);
   box-shadow: 0 3px 7px #2196f34d;
 }
 
-.custom-checkbox:checked ~ .checkmark:after {
+.checkbox-personalizado:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -384,62 +472,70 @@ th {
   }
 }
 
-.custom-checkbox:checked ~ .checkmark:after {
+.checkbox-personalizado:checked ~ .checkmark:after {
   animation: checkAnim 0.2s forwards;
 }
 
-.checkbox-container {
-  transform: scale(1);
+/* Tabela Bancos */
+.box-grid-bancos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 700px;
+  margin: 4.5rem auto 1rem auto;
+  padding: 1.625rem 1.625rem;
+  background-color: var(--branco);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow1);
 }
 
-/* Tabela */
-.custom-table {
-  min-width: 900px;
+.tabela-bancos {
+  width: 100%;
+  font-family: var(--primary-font);
+  color: var(--color4);
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-.custom-table thead tr, .custom-table thead th {
-  border-top: none;
-  border-bottom: none !important;
+.tabela-bancos th {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.custom-table tbody th, .custom-table tbody td {
-  color: var(--color4);
-  padding-bottom: 20px;
-  padding-top: 20px;
-  font-weight: 300;
-  border: none;
-}
-
-.custom-table tbody th small, .custom-table tbody td small {
-  display: block;
-  color: var(--color4);
+.tabela-bancos td {
+  font-size: 12px;
   font-weight: 300;
 }
 
-.custom-table tbody tr {
-  transition: .3s all ease;
-}
-
-.custom-table tbody tr:hover, .custom-table tbody tr:focus {
+.tabela-bancos tbody tr:hover,
+.tabela-bancos tbody tr:focus {
   background: var(--color1);
 }
 
-.custom-table .td-box-wrap {
-  padding: 0;
+.tabela-bancos tbody tr {
+  transition: .3s all ease;
 }
 
-.custom-table .box {
-  background: var(--branco);
-  border-radius: 4px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.row-bancos {
+  height: 35px;
+  text-align: center;
 }
 
-.custom-table .box td, 
-.custom-table .box th {
-  border: none !important;
+.contas-bancos-col {
+  width: 300px;
+}
+
+.ag-bancos-col {
+  width: 100px;
+}
+
+.conta-bancos-col {
+  width: 100px;
+}
+
+.banco-row {
+  text-align: left;
+  padding: 0 20px;
 }
 
 /* Modais */
