@@ -47,6 +47,10 @@ a:hover {
     opacity: 0.7;
 }
 
+.nav-meu-perfil a {
+    color: var(--color7);
+  }
+
 /* Barra de Navegação Fixa */
 .logo {
     font-size: 24px;
@@ -99,7 +103,7 @@ h1 {
     font-family: var(--primary-font);
     font-size: 25px;
     color: var(--branco);
-    background-color: var(--color3);
+    background-color: var(--color7);
 }
 
 h2 {

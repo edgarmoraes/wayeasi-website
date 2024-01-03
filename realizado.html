@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fluxo-de-caixa.css">
+    <link rel="stylesheet" href="css/realizado.css">
 <link rel="shortcut icon" href="images/wayeasi-favicon.png" type="image/x-icon">
-    <title>WayEasi | Fluxo de Caixa</title>
+    <title>WayEasi | Realizado</title>
 </head>
 <body>
     <header class="header">
@@ -87,30 +87,6 @@
                     </svg>
                 </button>
             </div>
-            <!-- ############### Botões da Caixa com Filtros ############### -->
-            <!-- ############### Botão de Recebimentos ############### -->
-            <section>
-                <button class="botao recebimentos">
-                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
-                    </svg>
-                </button>
-            </section>
-            <!-- ############### Botão de Pagamentos ############### -->
-            <section>
-                <button class="botao pagamentos">
-                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
-                    </svg>
-            </section>
-            <!-- ############### Botão de Transferências ############### -->
-            <section>
-                <button class="botao transferencias">
-                    <svg class="svgIcon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-                        <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6v13m0 0 3-3m-3 3-3-3m11-2V1m0 0L9 4m3-3 3 3"/>
-                    </svg>
-                </button>
-            </section>
         </div>
         <!-- ############### Tabela de Bancos ############### -->
         <div class="box-grid-bancos">
@@ -142,146 +118,6 @@
             </div>
         </div>
     </main>
-
-    <!-- ############### Janelas/Modais de Lançamentos ############### -->
-    <dialog class="modal-recebimentos">
-
-        <h1 class="modal-titulo">Recebimentos</h1>
-        
-        <form class="modal-form-recebimentos" action="#" method="post">
-            <section class="modal-flex">
-                <label for="data">Data</label>
-                <input class="modal-data" type="date" id="data-recebimentos" name="data" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="descricao">Descrição</label>
-                <input class="modal-descricao" id="descricao-recebimentos" type="text" name="descricao" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="observacao">Observação</label>
-                <input class="modal-obs" name="observacao"></input><br>
-            </section>
-            
-            <section class="modal-flex">
-                <label for="valor">Valor</label>
-                <input class="modal-valor" type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="contaContabil">Conta Contábil</label>
-                <select class="modal-conta-contabil" name="contaContabil" required>
-                  <option value="conta1">Conta 1</option>
-                  <option value="conta2">Conta 2</option>
-                  <option value="conta3">Conta 3</option>
-                </select><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="recorrencia">Recorrência</label>
-                <select class="modal-recorrencia" name="recorrencia" required>
-                  <option value="nao">Não</option>
-                  <option value="sim">Sim</option>
-                </select><br>
-            </section>
-        </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-recebimentos">Cancelar</button>
-        </section>
-    </dialog>
-
-    <dialog class="modal-pagamentos">
-
-        <h1 class="modal-titulo">Pagamentos</h1>
-        
-        <form class="modal-form-pagamentos" action="#" method="post">
-            <section class="modal-flex">
-                <label for="data">Data</label>
-                <input class="modal-data" type="date" id="data-pagamentos" name="data" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="descricao">Descrição</label>
-                <input class="modal-descricao" id="descricao-pagamentos" type="text" name="descricao" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="observacao">Observação</label>
-                <input class="modal-obs" name="observacao"></input><br>
-            </section>
-            
-            <section class="modal-flex">
-                <label for="valor">Valor</label>
-                <input class="modal-valor" type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="contaContabil">Conta Contábil</label>
-                <select class="modal-conta-contabil" name="contaContabil" required>
-                  <option value="conta1">Conta 1</option>
-                  <option value="conta2">Conta 2</option>
-                  <option value="conta3">Conta 3</option>
-                </select><br>
-            </section>
-        
-            <section class="modal-flex">
-                <label for="recorrencia">Recorrência</label>
-                <select class="modal-recorrencia" name="recorrencia" required>
-                  <option value="nao">Não</option>
-                  <option value="sim">Sim</option>
-                </select><br>
-            </section>
-        </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-pagamentos">Cancelar</button>
-        </section>
-    </dialog>
-
-    <dialog class="modal-transferencias">
-
-        <h1 class="modal-titulo">Transferências</h1>
-        
-        <form class="modal-form-transferencias" action="#" method="post">
-            <section class="modal-flex">
-                <label for="data">Data</label>
-                <input class="modal-data" type="date" id="data-transferencias" name="data" required><br>
-            </section>
-            
-            <section class="modal-flex">
-                <label for="valor">Valor</label>
-                <input class="modal-valor" type="text" id="valor-transferencias" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
-            </section>
-            
-                <section class="modal-flex">
-                    <label for="bancoSaida">Do banco</label>
-                    <select class="modal-banco-saida" name="bancoSaida" required>
-                      <option value="banco1">Itaú</option>
-                      <option value="banco2">Santander</option>
-                      <option value="banco3">Sicoob</option>
-                    </select><br>
-                </section>
-                <section class="modal-flex">
-                    <label for="bancoEntrada">Para o banco</label>
-                    <select class="modal-banco-entrada" name="bancoEntrada" required>
-                      <option value="banco1">Itaú</option>
-                      <option value="banco2">Santander</option>
-                      <option value="banco3">Sicoob</option>
-                    </select><br>
-                </section>
-        
-            <section class="modal-flex mesclar-2">
-                <label for="descricao">Descrição</label>
-                <input class="modal-descricao" id="descricao3" type="text" name="descricao" required><br>
-            </section>
-        </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-transferencias">Cancelar</button>
-        </section>
-    </dialog>
 
     <!-- ############### Tabela com Lançamentos ############### -->
     <div class="conteudo-tabela-lancamentos">
