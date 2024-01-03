@@ -93,6 +93,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 700px;
+  height: 338px;
   margin: 4.5rem auto 1rem auto;
   padding: 1rem 1rem;
   background-color: var(--branco);
@@ -481,11 +482,24 @@ nav {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   width: 700px;
+  height: 338px;
   margin: 4.5rem auto 1rem auto;
   padding: 1.625rem 1.625rem;
   background-color: var(--branco);
   border-radius: 1rem;
   box-shadow: var(--box-shadow1);
+}
+
+.cabecalho-bancos {
+  position: sticky;
+  top: 0;
+  background-color: var(--color2); /* Adicione uma cor de fundo para destacar o cabeçalho */
+  z-index: 1; /* Certifique-se de que o cabeçalho esteja acima do restante do conteúdo */
+}
+
+.conteudo-tabela-bancos {
+  max-height: 286px; /* Ajuste conforme necessário */
+  overflow: auto;
 }
 
 .tabela-bancos {
