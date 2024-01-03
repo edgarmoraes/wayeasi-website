@@ -400,6 +400,15 @@ nav {
 .cabecalho-bancos {
   position: sticky;
   top: 0;
+  height: 35px;
+  background-color: var(--color2); /* Adicione uma cor de fundo para destacar o cabeçalho */
+  z-index: 1; /* Certifique-se de que o cabeçalho esteja acima do restante do conteúdo */
+}
+
+.totais-row {
+  position: sticky;
+  bottom: 0;
+  height: 35px;
   background-color: var(--color2); /* Adicione uma cor de fundo para destacar o cabeçalho */
   z-index: 1; /* Certifique-se de que o cabeçalho esteja acima do restante do conteúdo */
 }
@@ -457,6 +466,16 @@ nav {
 .banco-row {
   text-align: left;
   padding: 0 20px;
+}
+
+td.total-row {
+  text-align: center;
+  font-weight: 900;
+}
+
+td.saldo-total-banco-row {
+  text-align: center;
+  font-weight: 900;
 }
 
 /* Estilo das Caixas de Seleções e Datas */
