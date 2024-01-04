@@ -102,8 +102,8 @@ function abrirModal(openBtn, modal, formSelector, tagInputId, tagsHiddenInputId,
   abrirModal(openModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos');
   fecharModal(closeModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos');
 
-  abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferencias", 'tagInput-transferencias', 'tagsHiddenInput-transferencias', 'tag-container-transferencias');
-  fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias", 'tagInput-transferencias', 'tagsHiddenInput-transferencias', 'tag-container-transferencias');
+  abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferencias");
+  fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias");
 
 
 // Função para formatar o valor de um campo como moeda brasileira
