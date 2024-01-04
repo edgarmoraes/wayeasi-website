@@ -151,6 +151,8 @@
     </main>
 
     <!-- ############### Janelas/Modais de Lançamentos ############### -->
+
+    <!-- Modal Recebimentos -->
     <dialog class="modal-recebimentos">
 
         <h1 class="modal-titulo">Recebimentos</h1>
@@ -192,13 +194,21 @@
                   <option value="sim">Sim</option>
                 </select><br>
             </section>
+            <section class="modal-flex mesclar-2">
+                <div id="tag-container-recebimentos" class="tag-container">
+                    <!-- Tags will be dynamically added here -->
+                  </div>
+                  <input type="text" id="tagInput-recebimentos" class="tagInput" placeholder="Adicione uma tag">
+                  <input type="hidden" id="tagsHiddenInput-recebimentos">
+            </section>
+            <section class="modal-botoes">
+                <input class="modal-salvar" type="submit" value="Salvar">
+                <button class="modal-fechar-recebimentos">Cancelar</button>
+            </section>
         </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-recebimentos">Cancelar</button>
-        </section>
     </dialog>
 
+    <!-- Modal Pagamentos -->
     <dialog class="modal-pagamentos">
 
         <h1 class="modal-titulo">Pagamentos</h1>
@@ -240,13 +250,21 @@
                   <option value="sim">Sim</option>
                 </select><br>
             </section>
+            <section class="modal-flex mesclar-2">
+                <div id="tag-container-pagamentos" class="tag-container">
+                    <!-- Tags will be dynamically added here -->
+                  </div>
+                  <input type="text" id="tagInput-pagamentos" class="tagInput" placeholder="Adicione uma tag">
+                  <input type="hidden" id="tagsHiddenInput-pagamentos">
+            </section>
+            <section class="modal-botoes">
+                <input class="modal-salvar" type="submit" value="Salvar">
+                <button class="modal-fechar-pagamentos">Cancelar</button>
+            </section>
         </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-pagamentos">Cancelar</button>
-        </section>
     </dialog>
 
+    <!-- Modal Transferências -->    
     <dialog class="modal-transferencias">
 
         <h1 class="modal-titulo">Transferências</h1>
@@ -283,11 +301,11 @@
                 <label for="descricao">Descrição</label>
                 <input class="modal-descricao" id="descricao3" type="text" name="descricao" required><br>
             </section>
+            <section class="modal-botoes mesclar-2">
+                <input class="modal-salvar" type="submit" value="Salvar">
+                <button class="modal-fechar-transferencias">Cancelar</button>
+            </section>
         </form>
-        <section class="modal-botoes">
-            <input class="modal-salvar" type="submit" value="Salvar">
-            <button class="modal-fechar-transferencias">Cancelar</button>
-        </section>
     </dialog>
 
     <!-- ############### Tabela com Lançamentos ############### -->
@@ -425,6 +443,6 @@
         </button>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

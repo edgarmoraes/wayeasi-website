@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags Input</title>
+  <style>
+    #tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tag input {
+      display: none;
+      border: none;
+      background: none;
+      color: white;
+      width: auto;
+    }
+
+    input#tagInput {
+      padding: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="tag-container">
+    <!-- Tags will be dynamically added here -->
+  </div>
+  <input type="text" id="tagInput" placeholder="Adicione uma tag">
+  
+  <script>
+    document.getElementById('tagInput').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ',') {
+        event.preventDefault();
+        addTag(this.value.trim());
+        this.value = '';
+      }
+    });
+  
+    function addTag(tag) {
+      if (tag !== '') {
+        const tagContainer = document.getElementById('tag-container');
+        const tagElement = document.createElement('div');
+        const tagText = document.createElement('span');
+        const tagInput = document.createElement('input');
+  
+        tagElement.classList.add('tag');
+        tagText.textContent = tag;
+        tagElement.appendChild(tagText);
+  
+        tagInput.value = tag;
+        tagInput.addEventListener('blur', function() {
+          saveTagEdit(this, tagText);
+        });
+  
+        tagInput.addEventListener('keydown', function(event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            saveTagEdit(this, tagText);
+          }
+        });
+  
+        tagElement.addEventListener('click', function() {
+          tagInput.style.display = 'inline';
+          tagText.style.display = 'none';
+          tagInput.focus();
+        });
+  
+        tagElement.addEventListener('dblclick', function() {
+          this.remove();
+        });
+  
+        tagElement.appendChild(tagInput);
+        tagContainer.appendChild(tagElement);
+      }
+    }
+  
+    function saveTagEdit(tagInput, tagText) {
+      tagText.textContent = tagInput.value;
+      tagInput.style.display = 'none';
+      tagText.style.display = 'inline';
+    }
+  </script>
+  
+  
+</body>
+</html>
