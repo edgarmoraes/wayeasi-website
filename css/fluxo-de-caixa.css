@@ -319,6 +319,7 @@ nav {
 
 .tabela-lancamentos {
   margin: 10px;
+  margin-bottom: 30px;
   min-width: 900px;
   border-collapse: collapse;
   border-spacing: 0;
@@ -710,3 +711,164 @@ input:focus {
   box-shadow: var(--box-shadow2);
 }
 
+/* Botões da Checkbox */
+.botoes-acoes {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color4);
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de Liquidar */
+.liquidar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--color3);
+  cursor: pointer;
+  border: 2px solid #759c0a;
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.liquidar-button:hover {
+  background-color: #8fa74c;  
+}
+
+.liquidar-button:active {
+  transform: scale(0.9);
+}
+
+.nuvem {
+  transform: scale(1.0);
+  transition: 200ms linear;
+  fill: var(--branco);
+}
+
+.liquidar-button:hover > .nuvem {
+  transform: scale(1.2);
+}
+
+.liquidar-button:hover > .nuvem path {
+  fill: var(--branco);
+  cursor: pointer;
+}
+
+/* Botão de Apagar */
+.apagar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #ff5f5f;
+  cursor: pointer;
+  border: 2px solid #c44646;
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-acoes {
+  margin: 0.5rem 3rem;
+}
+
+.fundo-lixeira {
+  width: 15px;
+  z-index: 2;
+}
+
+.topo-lixeira {
+  width: 17px;
+  transform-origin: right;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+
+.apagar-button:hover .topo-lixeira {
+  transform: rotate(45deg);
+}
+
+.apagar-button:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.apagar-button:active {
+  transform: scale(0.9);
+}
+
+.lixeira {
+  position: absolute;
+  width: 14px;
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.apagar-button:hover .lixeira {
+  animation: throw 0.4s linear;
+}
+
+@keyframes throw {
+  from {
+    transform: translate(-400%, -700%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+/* Botão de Cancelar */
+.cancelar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--branco);
+  cursor: pointer;
+  border: 2px solid var(--color1);
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cancelar-button:hover {
+  background-color: var(--color2);  
+}
+
+.cancelar-button:active {
+  transform: scale(0.9);
+}
+
+.x-svg {
+  transform: scale(.4);
+  transition: 200ms linear;
+  fill: var(--color4);
+}
+
+.cancelar-button:hover > .x-svg {
+  transform: scale(.45);
+}
+
+.cancelar-button:hover > .x-svg path {
+  fill: var(--color4);
+  cursor: pointer;
+}
