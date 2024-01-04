@@ -9,7 +9,6 @@
   --transition-effect1: all ease-in-out;
   --box-shadow1: 0 0 1em #00000013;
   --box-shadow2: 0 0 1em #00000023;
-  --branco: #ffffff;
   --branco: #FFFFFF;
   --preto: #000000;
   --color1: #F0EEEE;
@@ -22,14 +21,14 @@
   --color8: #F87C7C;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {

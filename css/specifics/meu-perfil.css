@@ -1,34 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/* Estilos Universais */
-:root {
-    --primary-font: 'Open Sans', sans-serif;
-    --transition-duration1: 0.3s;
-    --transition-duration2: 0.2s;
-    --transition-effect1: all ease-in-out;
-    --box-shadow1: 0 0 1em #00000013;
-    --box-shadow2: 0 0 1em #00000023;
-    --branco: #FFFFFF;
-    --preto: #000000;
-    --color1: #F0EEEE;
-    --color2: #F4F2F2;
-    --color3: #B1C381;
-    --color4: #3D3D40;
-    --color5: #006919;
-    --color6: #740000;
-    --color7: #9BB8CD;
-    --color8: #F87C7C;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+/* Específicos Meu Perfil */
 
 body {
     display: flex;
@@ -37,60 +7,10 @@ body {
     align-items: center;
 }
 
-a {
-    color: var(--branco);
-    text-decoration: none;
-    transition: var(--transition-duration1);
-}
-
-a:hover {
-    opacity: 0.7;
-}
-
+/* Compartilhado */
 .nav-meu-perfil a {
     color: var(--color7);
   }
-
-/* Barra de Navegação Fixa */
-.logo {
-    font-size: 24px;
-    letter-spacing: 4px;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: var(--primary-font);
-    background-color: #3d3d40bf;
-    height: 8vh;
-    backdrop-filter: blur(5px);
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-}
-
-.nav-list li {
-    margin-left: 48px;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.line {
-    border: 0.5px solid var(--branco);
-    margin-top: 1.8px;
-    height: 16px;
-}
 
 /* Títulos */
 h1 {
