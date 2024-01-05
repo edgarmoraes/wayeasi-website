@@ -1,3 +1,4 @@
+// Aparecer barra de botões
 document.addEventListener('DOMContentLoaded', function () {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const botoesAcoes = document.querySelector('.botoes-acoes');
@@ -11,10 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (algumaCheckboxMarcada) {
                 // Pelo menos uma checkbox marcada, exibir os botões e adicionar a margem
                 botoesAcoes.style.display = 'flex';
-                tabelaLancamentos.style.marginBottom = '5rem';
+                botoesAcoes.classList.add('mostrar');
+                tabelaLancamentos.style.marginBottom = '6.5rem';
             } else {
                 // Nenhuma checkbox marcada, ocultar os botões e remover a margem
-                botoesAcoes.style.display = 'none';
+                botoesAcoes.classList.remove('mostrar');
                 tabelaLancamentos.style.marginBottom = '0';
             }
         });
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Ocultar os botões e remover a margem
-        botoesAcoes.style.display = 'none';
+        botoesAcoes.classList.remove('mostrar');
         tabelaLancamentos.style.marginBottom = '0';
     });
 });

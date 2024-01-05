@@ -64,9 +64,9 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 8vh;
   font-family: var(--primary-font);
   background-color: #3d3d40bf;
-  height: 8vh;
   backdrop-filter: blur(5px);
 }
 
@@ -447,17 +447,54 @@ td.saldo-total-banco-row {
 
 /* Botões da Checkbox */
 .botoes-acoes {
-  display: none;
+  opacity: 0; /* Inicialmente transparente */
+  grid-template-columns: repeat(3, 1fr);
   position: fixed;
   justify-content: center;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color4);
+  transform: translateX(-50%) translateY(100%); /* Inicialmente escondido abaixo */
+  background-color: #3d3d40bf;
+  backdrop-filter: blur(5px);
   padding: 10px;
-  border-top: 1px solid #ccc;
   width: 100%;
-  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -2px 5px 0px #0000001a;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Adiciona uma transição suave para as propriedades transform e opacity */
+}
+
+.botoes-acoes.mostrar {
+  opacity: 1; /* Quando mostrar, torna totalmente visível */
+  transform: translateX(-50%) translateY(0); /* Quando mostrar, move para translateY(0) para aparecer de baixo para cima */
+}
+
+.btn-areas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn-coluna, .total-liquidar-row {
+  font-family: var(--primary-font);
+  color: var(--branco);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-acoes {
+  margin: 0 2rem;
+}
+
+.total-liquidar-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Botão de Liquidar */
@@ -470,18 +507,20 @@ td.saldo-total-banco-row {
   border-radius: 50%;
   background-color: var(--color3);
   cursor: pointer;
-  border: 2px solid #759c0a;
+  border: 2px solid var(--color3);
   transition-duration: 0.3s;
   position: relative;
   overflow: hidden;
+  transform: scale(0.7);
 }
 
 .liquidar-button:hover {
-  background-color: #8fa74c;  
+  background-color: #8fa74c;
+  border: 2px solid #91a756;
 }
 
 .liquidar-button:active {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .nuvem {
@@ -510,14 +549,11 @@ td.saldo-total-banco-row {
   border-radius: 50%;
   background-color: #ff5f5f;
   cursor: pointer;
-  border: 2px solid #c44646;
+  border: 2px solid #ff5f5f;
   transition-duration: 0.3s;
   position: relative;
   overflow: hidden;
-}
-
-.btn-acoes {
-  margin: 0.5rem 3rem;
+  transform: scale(0.7);
 }
 
 .fundo-lixeira {
@@ -541,7 +577,7 @@ td.saldo-total-banco-row {
 }
 
 .apagar-button:active {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .lixeira {
@@ -582,6 +618,7 @@ td.saldo-total-banco-row {
   transition-duration: 0.3s;
   position: relative;
   overflow: hidden;
+  transform: scale(0.7);
 }
 
 .cancelar-button:hover {
@@ -589,7 +626,7 @@ td.saldo-total-banco-row {
 }
 
 .cancelar-button:active {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .x-svg {

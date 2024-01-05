@@ -276,7 +276,6 @@ input:focus {
 }
 
 /* Tag Container */
-
 .tag-container {
   display: flex;
   flex-wrap: wrap;
@@ -285,8 +284,8 @@ input:focus {
 }
 
 .tag {
-  background-color: #007BFF;
-  color: #fff;
+  background-color: var(--color7);
+  color: #000000;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -295,8 +294,18 @@ input:focus {
 .tag input {
   display: none;
   border: none;
-  background: none;
-  color: white;
+  background: var(--color7);
+  color: var(--color4);
+  font-weight: 700;
+  width: auto;
+}
+
+.tag input:focus {
+  display: none;
+  border: none;
+  background: var(--color2);
+  color: var(--color4);
+  font-weight: 700;
   width: auto;
 }
 

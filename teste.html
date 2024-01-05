@@ -5,95 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tags Input</title>
   <style>
-    #tag-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Para esconder a face da barra de rolagem */
+}
 
-    .tag {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
-    .tag input {
-      display: none;
-      border: none;
-      background: none;
-      color: white;
-      width: auto;
-    }
+.content {
+  padding: 20px;
+  margin-top: 50px; /* Para deixar espaço para o botão */
+  overflow-y: auto;
+  height: 400px; /* Ajuste conforme necessário */
+}
 
-    input#tagInput {
-      padding: 8px;
-      font-size: 16px;
-    }
+/* Estilize a face da barra de rolagem para torná-la invisível */
+.content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.content::-webkit-scrollbar {
+  width: 12px;
+}
+
+
   </style>
 </head>
 <body>
-  <div id="tag-container">
-    <!-- Tags will be dynamically added here -->
-  </div>
-  <input type="text" id="tagInput" placeholder="Adicione uma tag">
-  
+
+    <button id="freezeButton">Congelar Barra de Rolagem</button>
+
+    <div class="content">
+        <!-- Seu conteúdo aqui -->
+        <!-- Adicione bastante texto ou elementos para que a barra de rolagem seja necessária -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas praesentium voluptates expedita omnis possimus! Enim eveniet expedita molestiae impedit sequi illum provident, nobis explicabo, veniam, eum adipisci accusamus quas. Nihil. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus alias atque possimus laudantium quos praesentium placeat fugit harum, molestias ipsa tenetur animi voluptatum tempora inventore commodi, quidem odio tempore voluptate?  
+      </div>
+
   <script>
-    document.getElementById('tagInput').addEventListener('keydown', function(event) {
-      if (event.key === 'Enter' || event.key === ',') {
-        event.preventDefault();
-        addTag(this.value.trim());
-        this.value = '';
-      }
-    });
-  
-    function addTag(tag) {
-      if (tag !== '') {
-        const tagContainer = document.getElementById('tag-container');
-        const tagElement = document.createElement('div');
-        const tagText = document.createElement('span');
-        const tagInput = document.createElement('input');
-  
-        tagElement.classList.add('tag');
-        tagText.textContent = tag;
-        tagElement.appendChild(tagText);
-  
-        tagInput.value = tag;
-        tagInput.addEventListener('blur', function() {
-          saveTagEdit(this, tagText);
-        });
-  
-        tagInput.addEventListener('keydown', function(event) {
-          if (event.key === 'Enter') {
-            event.preventDefault();
-            saveTagEdit(this, tagText);
-          }
-        });
-  
-        tagElement.addEventListener('click', function() {
-          tagInput.style.display = 'inline';
-          tagText.style.display = 'none';
-          tagInput.focus();
-        });
-  
-        tagElement.addEventListener('dblclick', function() {
-          this.remove();
-        });
-  
-        tagElement.appendChild(tagInput);
-        tagContainer.appendChild(tagElement);
-      }
-    }
-  
-    function saveTagEdit(tagInput, tagText) {
-      tagText.textContent = tagInput.value;
-      tagInput.style.display = 'none';
-      tagText.style.display = 'inline';
-    }
+document.getElementById('freezeButton').addEventListener('click', function() {
+  const body = document.body;
+  const isFrozen = body.style.overflow === 'hidden';
+
+  if (isFrozen) {
+    body.style.overflow = 'auto';
+  } else {
+    body.style.overflow = 'hidden';
+  }
+});
   </script>
-  
   
 </body>
 </html>
