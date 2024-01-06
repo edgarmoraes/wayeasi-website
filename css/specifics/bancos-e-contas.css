@@ -1,0 +1,86 @@
+/* Tabelas Bancos */
+.box-grid-bancos {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.625rem 1.625rem;
+    background-color: var(--branco);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow1);
+}
+
+/* Botão de Adicionar */
+section {
+    margin: 4.5rem auto 1rem auto;
+}
+
+.botao {
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px #0000002a;
+    cursor: pointer;
+    transition-duration: var(--transition-duration1);
+    overflow: hidden;
+    position: relative;
+}
+
+.adicionar-banco {
+    background-color: var(--color5);
+}
+
+.svgIcon {
+    width: 40px;
+    transition-duration: var(--transition-duration1);
+}
+  
+.svgIcon path {
+    fill: var(--branco);
+}
+  
+.botao:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: var(--transition-duration1);
+    align-items: center;
+}
+  
+.adicionar-banco:hover {
+    background-color: var(--color3);
+}
+  
+.botao:hover .svgIcon {
+    width: 100px;
+    transition-duration: var(--transition-duration1);
+    transform: translateY(4%);
+}
+  
+.adicionar-banco::before {
+    position: absolute;
+    top: -20px;
+    color: var(--branco);
+    transition-duration: var(--transition-duration1);
+    font-size: 2px;
+}
+
+.botao:hover.adicionar-banco::before {
+    content: "Adicionar";
+}
+  
+.botao:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: var(--transition-duration1);
+}
+
+.botao:focus {
+    outline: none;
+}
+  

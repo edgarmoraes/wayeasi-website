@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/specifics/bancos-e-contas.css">
+    <link rel="stylesheet" href="css/styles.css">
+<link rel="shortcut icon" href="images/wayeasi-favicon.png" type="image/x-icon">
+    <title>WayEasi | Bancos e Contas</title>
+</head>
+<body>
+    <header class="header">
+        <!-- ############### Barra de Navegação Fixa ############### -->
+        <nav class="nav-bar">
+            <a class="logo" href="#">WAYEASI</a>
+            <ul class="nav-list">
+                <li class="nav-fluxo-de-caixa"><a href="fluxo-de-caixa.html">FLUXO DE CAIXA</a></li>
+                <li class="nav-realizado"><a href="realizado.html">REALIZADO</a></li>
+                <li class="nav-relatorios"><a href="#">RELATÓRIOS</a></li>
+                <li><div class="line"></div></li>
+                <li class="nav-configuracoes"><a href="configuracoes.html">CONFIGURAÇÕES</a></li>
+                <li class="nav-meu-perfil"><a href="meu-perfil.html">MEU PERFIL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <button class="botao adicionar-banco">
+            <svg class="svgIcon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7C13 6.44771 12.5523 6 12 6C11.4477 6 11 6.44771 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17Z" fill="#000000"/>
+                </svg>
+        </button>
+    </section>
+
+    <div class="box-grid-bancos">
+        <div class="conteudo-tabela-bancos">
+            <table class="tabela-bancos">
+                <thead class="cabecalho-bancos">
+                    <tr class="linha-cabecalho-bancos">
+                        <th class="contas-bancos-col" scope="col">Contas</th>
+                        <th class="ag-bancos-col" scope="col">Ag.</th>
+                        <th class="conta-bancos-col" scope="col">Conta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-bancos" scope="row">
+                        <td class="banco-row">Itaú</td>
+                        <td class="ag-row">0404</td>
+                        <td class="conta-row">10010-0</td>
+                    </tr>
+                    <tr class="row-bancos" scope="row">
+                        <td class="banco-row">Sicoob</td>
+                        <td class="ag-row">5935</td>
+                        <td class="conta-row">85496-3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>

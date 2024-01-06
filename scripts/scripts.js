@@ -197,14 +197,18 @@ function initializeTagInputs(inputId, containerId, hiddenInputId) {
       });
 
       tagElement.addEventListener('click', function() {
-        tagInput.style.display = 'inline';
-        tagText.style.display = 'none';
-        tagInput.focus();
+        setTimeout(function() {
+          tagInput.style.display = 'inline';
+          tagText.style.display = 'none';
+          tagInput.focus();
+        }, 500); // Tempo de intervalo para contar o click único
       });
 
       tagElement.addEventListener('dblclick', function() {
-        this.remove();
-        updateHiddenInput(containerId, hiddenInputId);
+        if (tagInput.style.display ==='none') {
+          this.remove();
+          updateHiddenInput(containerId, hiddenInputId);
+        }
       });
 
       tagElement.appendChild(tagInput);
