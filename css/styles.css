@@ -90,6 +90,10 @@ nav {
 /* Componentes da Caixa de Filtros
 ... */
 
+.mesclar-2 {
+  grid-column: span 2;
+}
+
 .mesclar-3 {
   grid-column: span 3;
 }
@@ -189,6 +193,68 @@ nav {
 }
 
 .icon-pesquisa {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+/* Caixa de Pesquisa de Tags */
+.pesquisa-tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.caixa-pesquisa-tags {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  font-family: var(--primary-font);
+  color: var(--color4);
+  background-color: var(--color2);
+  font-size: 15px;
+  border: none;
+  border-radius: 30px;
+  transition: var(--transition-effect1) var(--transition-duration1);
+}
+
+.caixa-pesquisa-tags:hover, .caixa-pesquisa-tags:focus {
+  box-shadow: var(--box-shadow1);
+}
+
+.caixa-pesquisa-tags:focus {
+  outline: none;
+  background-color: var(--color1);
+}
+
+.caixa-pesquisa-tags::-webkit-input-placeholder {
+  font-weight: 400;
+  color: var(--color4);
+}
+
+.caixa-pesquisa-tags:focus + .botao-pesquisa-tags {
+  background-color: var(--color1);
+}
+
+.botao-pesquisa-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-right: 1rem;
+  border: none;
+  background-color: var(--color2);
+}
+
+.botao-pesquisa-tags:hover {
+  cursor: pointer;
+}
+
+.icon-pesquisa-tags {
   height: 1.3em;
   width: 1.3em;
   fill: #b4b4b4;
