@@ -25,7 +25,7 @@
     </header>
 
     <section>
-        <button class="botao adicionar-banco">
+        <button class="botao adicionar-bancos">
             <svg class="svgIcon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7C13 6.44771 12.5523 6 12 6C11.4477 6 11 6.44771 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17Z" fill="#000000"/>
                 </svg>
@@ -58,6 +58,47 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <dialog class="modal-bancos">
 
+        <h1 class="modal-titulo">Bancos e Contas</h1>
+        
+        <form class="modal-form-bancos" action="#" method="post">
+            <section class="modal-flex">
+                <label for="banco">Banco</label>
+                <input class="modal-banco" id="descricao-bancos" type="text" name="descricao" required><br>
+            </section>
+        
+            <section class="modal-flex">
+                <label for="agencia">Agência</label>
+                <input class="modal-agencia" id="agencia-banco" type="text" name="agencia" required><br>
+            </section>
+        
+            <section class="modal-flex">
+                <label for="conta">Conta</label>
+                <input class="modal-conta" name="conta"></input><br>
+            </section>
+            
+            <section class="modal-flex">
+                <label for="valor">Saldo Inicial</label>
+                <input class="modal-valor" type="text" id="valor" name="valor" oninput="formatarCampoValor(this)" value="R$ 0,00" required><br>
+            </section>
+        
+            <section class="modal-flex">
+                <label for="contaContabil">Status</label>
+                <select class="modal-conta-contabil" name="contaContabil" required>
+                  <option value="ativo">Ativo</option>
+                  <option value="inativo">Inativo</option>
+                </select><br>
+            </section>
+
+            <section class="modal-botoes">
+                <input class="modal-salvar" type="submit" value="Salvar">
+                <button class="modal-fechar-bancos">Cancelar</button>
+            </section>
+        </form>
+    </dialog>
+
+    <script src="scripts/adicionar-bancos.js"></script>
 </body>
 </html>

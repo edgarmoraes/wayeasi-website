@@ -228,8 +228,8 @@ input:focus {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-  margin: 5px 5px;
+  align-items: flex-end;
+  margin: 0px 5px;
   gap: 1.5rem;
 }
 
@@ -280,7 +280,8 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .tag {

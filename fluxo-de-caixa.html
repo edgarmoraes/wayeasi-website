@@ -187,13 +187,19 @@
                 </select><br>
             </section>
         
-            <section class="modal-flex">
+            <section class="modal-flex" id="recorrencia-section">
                 <label for="recorrencia">Recorrência</label>
-                <select class="modal-recorrencia" name="recorrencia" required>
-                  <option value="nao">Não</option>
-                  <option value="sim">Sim</option>
+                <select class="modal-recorrencia" name="recorrencia" id="recorrencia-recebimentos" required onchange="mostrarParcelasRecebimentos()">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
                 </select><br>
             </section>
+        
+            <section class="modal-flex mesclar-2" id="parcelas-section-recebimentos" style="display:none;">
+                <label for="parcelas">Número de Parcelas</label>
+                <input class="modal-parcelas" type="number" id="parcelas" name="parcelas" min="1" value=""><br>
+            </section>
+
             <section class="modal-flex mesclar-2">
                 <div id="tag-container-recebimentos" class="tag-container">
                     <!-- Tags will be dynamically added here -->
@@ -245,11 +251,17 @@
         
             <section class="modal-flex">
                 <label for="recorrencia">Recorrência</label>
-                <select class="modal-recorrencia" name="recorrencia" required>
+                <select class="modal-recorrencia" name="recorrencia" id="recorrencia-pagamentos" required onchange="mostrarParcelasPagamentos()">
                   <option value="nao">Não</option>
                   <option value="sim">Sim</option>
                 </select><br>
             </section>
+
+            <section class="modal-flex mesclar-2" id="parcelas-section-pagamentos" style="display:none;">
+                <label for="parcelas">Número de Parcelas</label>
+                <input class="modal-parcelas" type="number" id="parcelas" name="parcelas" min="1" value=""><br>
+            </section>
+
             <section class="modal-flex mesclar-2">
                 <div id="tag-container-pagamentos" class="tag-container">
                     <!-- Tags will be dynamically added here -->

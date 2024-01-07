@@ -1,12 +1,12 @@
 // Aparecer barra de botões
 document.addEventListener('DOMContentLoaded', function () {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const botoesAcoes = document.querySelector('.botoes-acoes');
     const tabelaLancamentos = document.querySelector('.conteudo-tabela-lancamentos');
     const cancelarButton = document.querySelector('.cancelar-button');
-
+    
     checkboxes.forEach(function (checkbox) {
-        checkbox.addEventListener('change', function () {
+      checkbox.addEventListener('change', function () {
             const algumaCheckboxMarcada = Array.from(checkboxes).some(checkbox => checkbox.checked);
 
             if (algumaCheckboxMarcada) {
@@ -14,113 +14,137 @@ document.addEventListener('DOMContentLoaded', function () {
                 botoesAcoes.style.display = 'flex';
                 botoesAcoes.classList.add('mostrar');
                 tabelaLancamentos.style.marginBottom = '6.5rem';
-            } else {
+              } else {
                 // Nenhuma checkbox marcada, ocultar os botões e remover a margem
                 botoesAcoes.classList.remove('mostrar');
                 tabelaLancamentos.style.marginBottom = '0';
-            }
-        });
-    });
-
-    cancelarButton.addEventListener('click', function () {
-        checkboxes.forEach(function (checkbox) {
+              }
+            });
+          });
+          
+          cancelarButton.addEventListener('click', function () {
+            checkboxes.forEach(function (checkbox) {
             checkbox.checked = false;
+          });
+          
+          // Ocultar os botões e remover a margem
+          botoesAcoes.classList.remove('mostrar');
+          tabelaLancamentos.style.marginBottom = '0';
         });
-
-        // Ocultar os botões e remover a margem
-        botoesAcoes.classList.remove('mostrar');
-        tabelaLancamentos.style.marginBottom = '0';
-    });
-});
-
-function liquidar() {
-    alert('Ação de liquidar');
-}
-
-function apagar() {
-    alert('Ação de apagar');
-}
-
-
+      });
+      
+      function liquidar() {
+        alert('Ação de liquidar');
+      }
+      
+      function apagar() {
+        alert('Ação de apagar');
+      }
+      
+      
 // Modais
 function abrirModal(openBtn, modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId) {
-    openBtn.addEventListener('click', () => {
-      modalAberto = modal;
-      modal.showModal();
-      document.body.style.overflow = 'hidden';
-    });
-  }
+  openBtn.addEventListener('click', () => {
+    modalAberto = modal;
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
+  });
+}
 
-  function fecharModal(closeBtn, modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId) {
-    closeBtn.addEventListener('click', () => {
-      fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId);
-    });
-
-    modal.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId);
-      }
-    });
-
-    modal.addEventListener('close', () => {
-      fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId);
-    });
-  }
-
-  function fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId) {
-    modal.close();
-    document.body.style.overflow = '';
-    document.querySelector(formSelector).reset();
-
-    const tagContainer = document.getElementById(tagContainerId);
-    while (tagContainer.firstChild) {
-      tagContainer.removeChild(tagContainer.firstChild);
+function fecharModal(closeBtn, modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId, parcelasId) {
+  closeBtn.addEventListener('click', () => {
+    fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId, parcelasId);
+  });
+  
+  modal.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId, parcelasId);
     }
+  });
 
-    const tagInput = document.getElementById(tagInputId);
-    const tagsHiddenInput = document.getElementById(tagsHiddenInputId);
+  modal.addEventListener('close', () => {
+    fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId, parcelasId);
+  });
+}
 
-    tagInput.value = '';
-    tagsHiddenInput.value = '';
+function fechar(modal, formSelector, tagInputId, tagsHiddenInputId, tagContainerId, parcelasId) {
+  modal.close();
+  document.body.style.overflow = '';
+  document.querySelector(formSelector).reset();
+  
+  const tagContainer = document.getElementById(tagContainerId);
+  while (tagContainer.firstChild) {
+      tagContainer.removeChild(tagContainer.firstChild);
   }
+  
+  const tagInput = document.getElementById(tagInputId);
+  const tagsHiddenInput = document.getElementById(tagsHiddenInputId);
+  
+  tagInput.value = '';
+  tagsHiddenInput.value = '';
 
-  // Elementos do DOM
-  const openModalRecebimentos = document.querySelector('.recebimentos');
-  const openModalPagamentos = document.querySelector('.pagamentos');
-  const openModalTransferencias = document.querySelector('.transferencias');
+  // Adicionar o código para redefinir e ocultar o campo de parcelas
+  const parcelasInput = document.getElementById(parcelasId);
+  parcelasInput.value = ''; // Define o valor padrão para 1
+  parcelasInput.style.display = 'none'; // Oculta o campo de parcelas
+}
 
-  const closeModalRecebimentos = document.querySelector('.modal-fechar-recebimentos');
-  const closeModalPagamentos = document.querySelector('.modal-fechar-pagamentos');
-  const closeModalTransferencias = document.querySelector('.modal-fechar-transferencias');
+// Elementos do DOM
+const openModalRecebimentos = document.querySelector('.recebimentos');
+const openModalPagamentos = document.querySelector('.pagamentos');
+const openModalTransferencias = document.querySelector('.transferencias');
 
-  const modalRecebimentos = document.querySelector('.modal-recebimentos');
-  const modalPagamentos = document.querySelector('.modal-pagamentos');
-  const modalTransferencias = document.querySelector('.modal-transferencias');
+const closeModalRecebimentos = document.querySelector('.modal-fechar-recebimentos');
+const closeModalPagamentos = document.querySelector('.modal-fechar-pagamentos');
+const closeModalTransferencias = document.querySelector('.modal-fechar-transferencias');
 
-  // Event Listeners
-  abrirModal(openModalRecebimentos, modalRecebimentos, ".modal-form-recebimentos", 'tagInput-recebimentos', 'tagsHiddenInput-recebimentos', 'tag-container-recebimentos');
-  fecharModal(closeModalRecebimentos, modalRecebimentos, ".modal-form-recebimentos", 'tagInput-recebimentos', 'tagsHiddenInput-recebimentos', 'tag-container-recebimentos');
+const modalRecebimentos = document.querySelector('.modal-recebimentos');
+const modalPagamentos = document.querySelector('.modal-pagamentos');
+const modalTransferencias = document.querySelector('.modal-transferencias');
 
-  abrirModal(openModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos');
-  fecharModal(closeModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos');
+// Event Listeners
+abrirModal(openModalRecebimentos, modalRecebimentos, ".modal-form-recebimentos", 'tagInput-recebimentos', 'tagsHiddenInput-recebimentos', 'tag-container-recebimentos');
+fecharModal(closeModalRecebimentos, modalRecebimentos, ".modal-form-recebimentos", 'tagInput-recebimentos', 'tagsHiddenInput-recebimentos', 'tag-container-recebimentos', "parcelas-section-recebimentos");
 
-  abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferencias");
-  fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias");
+abrirModal(openModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos');
+fecharModal(closeModalPagamentos, modalPagamentos, ".modal-form-pagamentos", 'tagInput-pagamentos', 'tagsHiddenInput-pagamentos', 'tag-container-pagamentos', "parcelas-section-pagamentos");
 
+abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferencias");
+fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias");
 
+// Função para mostrar campo de recorrência
+function mostrarOcultarParcelas(recorrenciaId, parcelasSectionId) {
+  var recorrenciaSelect = document.getElementById(recorrenciaId);
+  var parcelasSection = document.getElementById(parcelasSectionId);
+
+  if (recorrenciaSelect.value === "sim") {
+    parcelasSection.style.display = "block";
+  } else {
+    parcelasSection.style.display = "none";
+  }
+}
+
+function mostrarParcelasRecebimentos() {
+  mostrarOcultarParcelas("recorrencia-recebimentos", "parcelas-section-recebimentos");
+}
+
+function mostrarParcelasPagamentos() {
+  mostrarOcultarParcelas("recorrencia-pagamentos", "parcelas-section-pagamentos");
+}
+  
 // Função para formatar o valor de um campo como moeda brasileira
 function formatarCampoValor(input) {
-    // Obtém apenas os dígitos do valor atual
-    var valorNumerico = input.value.replace(/\D/g, '');
+  // Obtém apenas os dígitos do valor atual
+  var valorNumerico = input.value.replace(/\D/g, '');
 
-    // Converte o valor para número
-    var valorDecimal = parseFloat(valorNumerico) / 100;
+  // Converte o valor para número
+  var valorDecimal = parseFloat(valorNumerico) / 100;
 
-    // Formata o valor como moeda brasileira
-    var valorFormatado = valorDecimal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  // Formata o valor como moeda brasileira
+  var valorFormatado = valorDecimal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    // Adiciona o "R$" ao valor formatado e atualiza o campo
-    input.value = "R$ " + (isNaN(valorDecimal) ? "0,00" : valorFormatado.replace('R$', '').trim());
+  // Adiciona o "R$" ao valor formatado e atualiza o campo
+  input.value = "R$ " + (isNaN(valorDecimal) ? "0,00" : valorFormatado.replace('R$', '').trim());
 }
 
 // Adiciona um evento de teclado para detectar 'Shift + D'
@@ -195,21 +219,29 @@ function initializeTagInputs(inputId, containerId, hiddenInputId) {
           updateHiddenInput(containerId, hiddenInputId);
         }
       });
-
+      
       tagElement.addEventListener('click', function() {
+        let singleClick = true;
+        
         setTimeout(function() {
-          tagInput.style.display = 'inline';
-          tagText.style.display = 'none';
-          tagInput.focus();
+            if (singleClick) {
+                tagInput.style.display = 'inline';
+                tagText.style.display = 'none';
+                tagInput.focus();
+            }
         }, 500); // Tempo de intervalo para contar o click único
+    
+        tagElement.addEventListener('dblclick', function() {
+          const isBeingEdited = tagInput.style.display === 'inline';
+      
+          setTimeout(() => {
+              if (!isBeingEdited) {
+                  this.remove();
+                  updateHiddenInput(containerId, hiddenInputId);
+              }
+          }, 250); // Ajuste o tempo conforme necessário
       });
-
-      tagElement.addEventListener('dblclick', function() {
-        if (tagInput.style.display ==='none') {
-          this.remove();
-          updateHiddenInput(containerId, hiddenInputId);
-        }
-      });
+    });
 
       tagElement.appendChild(tagInput);
       tagContainer.appendChild(tagElement);
