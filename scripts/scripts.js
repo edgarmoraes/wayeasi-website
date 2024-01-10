@@ -113,23 +113,30 @@ abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferen
 fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias");
 
 // Função para mostrar campo de recorrência
-function mostrarOcultarParcelas(recorrenciaId, parcelasSectionId) {
+function mostrarOcultarParcelas(recorrenciaId, parcelasSectionId, parcelasId) {
   var recorrenciaSelect = document.getElementById(recorrenciaId);
   var parcelasSection = document.getElementById(parcelasSectionId);
+  var parcelasInput = document.getElementById(parcelasId);
+
+  console.log("recorrenciaSelect.value:", recorrenciaSelect.value);
+  console.log("parcelasSection.style.display:", parcelasSection.style.display);
+  console.log("parcelasInput.value:", parcelasInput.value);
 
   if (recorrenciaSelect.value === "sim") {
     parcelasSection.style.display = "block";
+    parcelasInput.value = "";
   } else {
     parcelasSection.style.display = "none";
+    parcelasInput.value = "1";
   }
 }
 
 function mostrarParcelasRecebimentos() {
-  mostrarOcultarParcelas("recorrencia-recebimentos", "parcelas-section-recebimentos");
+  mostrarOcultarParcelas("recorrencia-recebimentos", "parcelas-section-recebimentos", "parcelas-recebimentos");
 }
 
 function mostrarParcelasPagamentos() {
-  mostrarOcultarParcelas("recorrencia-pagamentos", "parcelas-section-pagamentos");
+  mostrarOcultarParcelas("recorrencia-pagamentos", "parcelas-section-pagamentos", "parcelas-pagamentos");
 }
   
 // Função para formatar o valor de um campo como moeda brasileira
