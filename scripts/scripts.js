@@ -113,30 +113,32 @@ abrirModal(openModalTransferencias, modalTransferencias, ".modal-form-transferen
 fecharModal(closeModalTransferencias, modalTransferencias, ".modal-form-transferencias");
 
 // Função para mostrar campo de recorrência
-function mostrarOcultarParcelas(recorrenciaId, parcelasSectionId, parcelasId) {
-  var recorrenciaSelect = document.getElementById(recorrenciaId);
-  var parcelasSection = document.getElementById(parcelasSectionId);
-  var parcelasInput = document.getElementById(parcelasId);
+function mostrarParcelasRecebimentos() {
+  var select = document.getElementById('recorrencia-recebimentos');
+  var section = document.getElementById('parcelas-section-recebimentos');
+  var input = document.getElementById('parcelas-recebimentos');
 
-  console.log("recorrenciaSelect.value:", recorrenciaSelect.value);
-  console.log("parcelasSection.style.display:", parcelasSection.style.display);
-  console.log("parcelasInput.value:", parcelasInput.value);
-
-  if (recorrenciaSelect.value === "sim") {
-    parcelasSection.style.display = "block";
-    parcelasInput.value = "";
+  if (select.value === 'sim') {
+      section.style.display = 'block';
+      input.value = '';  // Removido o valor '1' aqui
   } else {
-    parcelasSection.style.display = "none";
-    parcelasInput.value = "1";
+      section.style.display = 'none';
+      input.value = '1';
   }
 }
 
-function mostrarParcelasRecebimentos() {
-  mostrarOcultarParcelas("recorrencia-recebimentos", "parcelas-section-recebimentos", "parcelas-recebimentos");
-}
-
 function mostrarParcelasPagamentos() {
-  mostrarOcultarParcelas("recorrencia-pagamentos", "parcelas-section-pagamentos", "parcelas-pagamentos");
+  var select = document.getElementById('recorrencia-pagamentos');
+  var section = document.getElementById('parcelas-section-pagamentos');
+  var input = document.getElementById('parcelas-pagamentos');
+
+  if (select.value === 'sim') {
+      section.style.display = 'block';
+      input.value = '';  // Removido o valor '1' aqui
+  } else {
+      section.style.display = 'none';
+      input.value = '1';
+  }
 }
   
 // Função para formatar o valor de um campo como moeda brasileira
